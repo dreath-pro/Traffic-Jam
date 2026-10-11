@@ -1,0 +1,16 @@
+# Godot 4 specific
+.godot/
+.import/
+export.cfg
+export_presets.cfg
+
+# C# / .NET / Mono specific
+.vs/
+bin/
+obj/
+*.csproj.user
+*.sln.docstates
+*.suo
+*.user
+*.userosscache
+*.sln.ide
