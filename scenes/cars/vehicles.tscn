@@ -4,7 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://da8evmakpvsfl" path="res://icon.svg" id="1_suqk4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
-size = Vector2(128, 128)
+size = Vector2(119.047485, 120.23795)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssr1l"]
+size = Vector2(130.95226, 130.95226)
 
 [node name="Vehicles" type="CharacterBody2D" unique_id=1351980439]
 scale = Vector2(0.840001, 0.840001)
@@ -17,4 +20,16 @@ self_modulate = Color(0.9411765, 0, 0.25490198, 1)
 texture = ExtResource("1_suqk4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2030877195]
+position = Vector2(2.8383127e-07, -0.5952337)
+scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_sl3ph")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1054443945]
+collision_layer = 0
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1358824892]
+position = Vector2(3.0511865e-06, 3.5478913e-06)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_ssr1l")
+debug_color = Color(0.96920174, 0, 0.46601945, 0.41960785)

@@ -4,7 +4,10 @@
 [ext_resource type="Script" uid="uid://duy6kbsqidlu7" path="res://scenes/cars/Player.cs" id="1_j51pt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
-size = Vector2(70, 70)
+size = Vector2(65.24388, 65.85364)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssr1l"]
+size = Vector2(73.17071, 73.17071)
 
 [node name="Player" type="CharacterBody2D" unique_id=2040709646]
 scale = Vector2(1.6400006, 1.6400006)
@@ -16,4 +19,14 @@ scale = Vector2(0.546875, 0.546875)
 texture = ExtResource("1_0ui01")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=99213374]
+position = Vector2(-0.30487823, 0)
 shape = SubResource("RectangleShape2D_sl3ph")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1816587387]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=780188687]
+position = Vector2(-1.8899027e-06, -1.8899027e-06)
+shape = SubResource("RectangleShape2D_ssr1l")
+debug_color = Color(0.93385285, 0.21728754, 0.3629396, 0.41960785)
