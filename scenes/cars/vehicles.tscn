@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bbxmlxx6u6016"]
+
+[ext_resource type="Script" uid="uid://pj6kiijdyvjl" path="res://scenes/cars/Vehicles.cs" id="1_oaoh4"]
+[ext_resource type="Texture2D" uid="uid://da8evmakpvsfl" path="res://icon.svg" id="1_suqk4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
+size = Vector2(128, 128)
+
+[node name="Vehicles" type="CharacterBody2D" unique_id=1351980439]
+scale = Vector2(0.840001, 0.840001)
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_oaoh4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2145692527]
+self_modulate = Color(0.9411765, 0, 0.25490198, 1)
+texture = ExtResource("1_suqk4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2030877195]
+shape = SubResource("RectangleShape2D_sl3ph")

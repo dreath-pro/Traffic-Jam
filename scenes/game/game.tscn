@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c5g6ljs8mnkrw" path="res://assets/map/grass.png" id="1_sul5r"]
 [ext_resource type="PackedScene" uid="uid://dk7ivb4q2kp1m" path="res://scenes/cars/player.tscn" id="2_7h61r"]
+[ext_resource type="PackedScene" uid="uid://bbxmlxx6u6016" path="res://scenes/cars/vehicles.tscn" id="3_0sr1o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7h61r"]
 texture = ExtResource("1_sul5r")
@@ -1465,6 +1466,18 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_7h61r")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
+size = Vector2(1152, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7un2"]
+size = Vector2(1162, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssr1l"]
+size = Vector2(10, 650)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ft2r"]
+size = Vector2(10, 660)
+
 [node name="Game" type="Node2D" unique_id=1545394693]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=714664935]
@@ -1473,3 +1486,44 @@ tile_set = SubResource("TileSet_sl3ph")
 
 [node name="Player" parent="." unique_id=2040709646 instance=ExtResource("2_7h61r")]
 position = Vector2(194, 317)
+
+[node name="Vehicles" type="Node2D" parent="." unique_id=505460556]
+
+[node name="Vehicles1" parent="Vehicles" unique_id=1351980439 instance=ExtResource("3_0sr1o")]
+position = Vector2(463, 148)
+
+[node name="Vehicles2" parent="Vehicles" unique_id=1599850772 instance=ExtResource("3_0sr1o")]
+position = Vector2(863, 143)
+
+[node name="Vehicles3" parent="Vehicles" unique_id=1374770553 instance=ExtResource("3_0sr1o")]
+position = Vector2(657, 314)
+
+[node name="Vehicles4" parent="Vehicles" unique_id=1510277072 instance=ExtResource("3_0sr1o")]
+position = Vector2(463, 534)
+
+[node name="Vehicles5" parent="Vehicles" unique_id=1519033013 instance=ExtResource("3_0sr1o")]
+position = Vector2(1007, 532)
+
+[node name="MapBorderY" type="StaticBody2D" parent="." unique_id=1973475841]
+collision_layer = 4
+collision_mask = 0
+
+[node name="TopBorder" type="CollisionShape2D" parent="MapBorderY" unique_id=2121552473]
+position = Vector2(576, -5)
+shape = SubResource("RectangleShape2D_sl3ph")
+
+[node name="BotBorder" type="CollisionShape2D" parent="MapBorderY" unique_id=1244580029]
+position = Vector2(571, 645)
+shape = SubResource("RectangleShape2D_e7un2")
+
+[node name="MapBorderX" type="StaticBody2D" parent="." unique_id=50303643]
+collision_layer = 8
+collision_mask = 0
+
+[node name="Left Border" type="CollisionShape2D" parent="MapBorderX" unique_id=243634983]
+position = Vector2(-5, 315)
+shape = SubResource("RectangleShape2D_ssr1l")
+
+[node name="Right Border" type="CollisionShape2D" parent="MapBorderX" unique_id=1145166539]
+position = Vector2(1157, 320)
+shape = SubResource("RectangleShape2D_5ft2r")
