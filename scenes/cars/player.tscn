@@ -1,13 +1,18 @@
 [gd_scene format=3 uid="uid://dk7ivb4q2kp1m"]
 
 [ext_resource type="Texture2D" uid="uid://da8evmakpvsfl" path="res://icon.svg" id="1_0ui01"]
+[ext_resource type="Script" uid="uid://duy6kbsqidlu7" path="res://scenes/cars/Player.cs" id="1_j51pt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
-size = Vector2(128, 128)
+size = Vector2(70, 70)
 
 [node name="Player" type="CharacterBody2D" unique_id=2040709646]
+position = Vector2(0, -69)
+scale = Vector2(2.0000005, 2.0000005)
+script = ExtResource("1_j51pt")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=266139348]
+scale = Vector2(0.546875, 0.546875)
 texture = ExtResource("1_0ui01")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=99213374]
