@@ -37,6 +37,7 @@ public partial class Vehicles : CharacterBody2D
     {
         Area2D hitbox = GetNode<Area2D>("Hitbox");  
         hitbox.BodyEntered += OnBodyEntered;
+        hitbox.AreaEntered += OnAreaEntered;
 
         Timer decision = GetNode<Timer>("Decision");
         decision.Timeout += Decision;
@@ -71,6 +72,11 @@ public partial class Vehicles : CharacterBody2D
                 MoveLeftDown();
                 break;
         }
+    }
+
+    private void OnAreaEntered(Area2D area)
+    {
+        QueueFree();
     }
 
     private void OnBodyEntered(Node2D body)
