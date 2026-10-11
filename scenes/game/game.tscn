@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c5g6ljs8mnkrw" path="res://assets/map/grass.png" id="1_sul5r"]
 [ext_resource type="PackedScene" uid="uid://dk7ivb4q2kp1m" path="res://scenes/cars/player.tscn" id="2_7h61r"]
 [ext_resource type="PackedScene" uid="uid://bbxmlxx6u6016" path="res://scenes/cars/vehicles.tscn" id="3_0sr1o"]
+[ext_resource type="Script" uid="uid://cyefydkyrfo5o" path="res://scenes/game/VehicleSpawner.cs" id="4_kelw5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7h61r"]
 texture = ExtResource("1_sul5r")
@@ -1487,23 +1488,6 @@ tile_set = SubResource("TileSet_sl3ph")
 [node name="Player" parent="." unique_id=2040709646 instance=ExtResource("2_7h61r")]
 position = Vector2(194, 317)
 
-[node name="Vehicles" type="Node2D" parent="." unique_id=505460556]
-
-[node name="Vehicles1" parent="Vehicles" unique_id=1351980439 instance=ExtResource("3_0sr1o")]
-position = Vector2(463, 148)
-
-[node name="Vehicles2" parent="Vehicles" unique_id=1599850772 instance=ExtResource("3_0sr1o")]
-position = Vector2(863, 143)
-
-[node name="Vehicles3" parent="Vehicles" unique_id=1374770553 instance=ExtResource("3_0sr1o")]
-position = Vector2(657, 314)
-
-[node name="Vehicles4" parent="Vehicles" unique_id=1510277072 instance=ExtResource("3_0sr1o")]
-position = Vector2(463, 534)
-
-[node name="Vehicles5" parent="Vehicles" unique_id=1519033013 instance=ExtResource("3_0sr1o")]
-position = Vector2(1007, 532)
-
 [node name="MapBorderY" type="StaticBody2D" parent="." unique_id=1973475841]
 collision_layer = 4
 collision_mask = 0
@@ -1527,3 +1511,20 @@ shape = SubResource("RectangleShape2D_ssr1l")
 [node name="Right Border" type="CollisionShape2D" parent="MapBorderX" unique_id=1145166539]
 position = Vector2(1157, 320)
 shape = SubResource("RectangleShape2D_5ft2r")
+
+[node name="VehicleSpawner" type="Node2D" parent="." unique_id=1803770269]
+script = ExtResource("4_kelw5")
+VehicleScene = ExtResource("3_0sr1o")
+
+[node name="Timer" type="Timer" parent="VehicleSpawner" unique_id=1974810360]
+wait_time = 1.5
+autostart = true
+
+[node name="SpawnPoint1" type="Marker2D" parent="VehicleSpawner" unique_id=1852238697]
+position = Vector2(1290, 87)
+
+[node name="SpawnPoint2" type="Marker2D" parent="VehicleSpawner" unique_id=1532745184]
+position = Vector2(1290, 321)
+
+[node name="SpawnPoint3" type="Marker2D" parent="VehicleSpawner" unique_id=1215501511]
+position = Vector2(1290, 551)

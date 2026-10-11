@@ -7,5 +7,8 @@ public partial class Vehicles : CharacterBody2D
     {
         Velocity = Vector2.Left * 200;
         MoveAndSlide();
+
+        if (GlobalPosition.X < -100)
+            QueueFree();
     }
 }
