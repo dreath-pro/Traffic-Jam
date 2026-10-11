@@ -33,3 +33,11 @@ position = Vector2(3.0511865e-06, 3.5478913e-06)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_ssr1l")
 debug_color = Color(0.96920174, 0, 0.46601945, 0.41960785)
+
+[node name="Decision" type="Timer" parent="." unique_id=1316082713]
+wait_time = 3.0
+autostart = true
+
+[node name="Steady" type="Timer" parent="." unique_id=1863869867]
+wait_time = 2.0
+autostart = true
