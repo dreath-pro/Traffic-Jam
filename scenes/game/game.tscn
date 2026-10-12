@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dk7ivb4q2kp1m" path="res://scenes/cars/player.tscn" id="2_7h61r"]
 [ext_resource type="PackedScene" uid="uid://bbxmlxx6u6016" path="res://scenes/cars/vehicles.tscn" id="3_0sr1o"]
 [ext_resource type="Script" uid="uid://cyefydkyrfo5o" path="res://scenes/game/VehicleSpawner.cs" id="4_kelw5"]
+[ext_resource type="Texture2D" uid="uid://gk73shxpta07" path="res://assets/icons/heart_icon.png" id="6_5i0tg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7h61r"]
 texture = ExtResource("1_sul5r")
@@ -1490,6 +1491,15 @@ public partial class TimerHud : CanvasLayer
 }
 "
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5i0tg"]
+bg_color = Color(0.12437948, 0.26333922, 0.50509137, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdhmt"]
+bg_color = Color(0.060962453, 0.15083906, 0.3100922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87uf6"]
+bg_color = Color(0.18786633, 0.36204147, 0.6702654, 1)
+
 [node name="Game" type="Node2D" unique_id=1545394693]
 script = ExtResource("1_lfrn8")
 
@@ -1581,3 +1591,84 @@ layout_mode = 0
 offset_top = 515.0
 offset_right = 1152.0
 offset_bottom = 640.0
+alignment = 1
+
+[node name="HealthLayout" type="HBoxContainer" parent="GameHUD/Control/HBoxContainer" unique_id=1718234216]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GameHUD/Control/HBoxContainer/HealthLayout" unique_id=13410052]
+layout_mode = 2
+texture = ExtResource("6_5i0tg")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HealthLabel" type="Label" parent="GameHUD/Control/HBoxContainer/HealthLayout" unique_id=366772276]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 73
+text = "x0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOverHUD" type="CanvasLayer" parent="." unique_id=1385272621]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOverHUD" unique_id=497659162]
+offset_left = -19.0
+offset_top = -21.0
+offset_right = 1175.0
+offset_bottom = 671.0
+color = Color(0, 0, 0, 0.7019608)
+
+[node name="Control" type="Control" parent="GameOverHUD" unique_id=542946089]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 640.0
+
+[node name="Label" type="Label" parent="GameOverHUD/Control" unique_id=1516686558]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 108.0
+offset_right = 869.0
+offset_bottom = 251.0
+theme_override_font_sizes/font_size = 90
+text = "GameOver"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverHUD/Control" unique_id=968279549]
+layout_mode = 0
+offset_top = 247.0
+offset_right = 1152.0
+offset_bottom = 398.0
+alignment = 1
+
+[node name="SurviveTimeLabel" type="Label" parent="GameOverHUD/Control/VBoxContainer" unique_id=358339837]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Survive Time: 0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CopsEscapedLabel" type="Label" parent="GameOverHUD/Control/VBoxContainer" unique_id=2043841256]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Cops Escaped: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="GameOverHUD/Control" unique_id=54024353]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 389.0
+offset_top = 431.0
+offset_right = 762.0
+offset_bottom = 536.0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_5i0tg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bdhmt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87uf6")
+text = "Restart"

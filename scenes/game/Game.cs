@@ -3,7 +3,9 @@ using System;
 
 public partial class Game : Node2D
 {
-    int seconds = 0, minutes = 0, hours = 0;
+    private int seconds = 0, minutes = 0, hours = 0;
+    private Player player;
+    private Timer timeCount;
 
     public override void _Process(double delta)
     {
@@ -12,9 +14,29 @@ public partial class Game : Node2D
 
     public override void _Ready()
     {
-        Timer timeCount = GetNode<Timer>("%TimeCount");
+        timeCount = GetNode<Timer>("%TimeCount");
         timeCount.Timeout += DisplayTime;
-        DisplayTime();
+
+        player = GetNode<Player>("Player");
+        GetNode<Label>("%HealthLabel").Text = "x" + player.health;
+
+        player.GameOver += OnGameOver;
+        GetNode<Button>("%RestartButton").Pressed += OnRestartPressed;
+        GetNode<CanvasLayer>("GameOverHUD").ProcessMode = Node.ProcessModeEnum.WhenPaused;
+    }
+
+    private void OnGameOver()
+    {
+        timeCount.Stop();
+        GetTree().Paused = true;
+        GetNode<CanvasLayer>("GameOverHUD").Visible = true;
+    }
+
+    private void OnRestartPressed()
+    {
+        GD.Print("Restart button pressed");
+        GetTree().Paused = false;
+        GetTree().ReloadCurrentScene();
     }
 
     private void DisplayTime()
@@ -38,11 +60,11 @@ public partial class Game : Node2D
         {
             if (hours < 10)
             {
-                timeText = "0" + hours + " : ";
+                timeText = "0" + hours + ":";
             }
             else
             {
-                timeText = hours + " : ";
+                timeText = hours + ":";
             }
         }
 
@@ -50,15 +72,15 @@ public partial class Game : Node2D
         {
             if (hours == 0)
             {
-                timeText += minutes + " : ";
+                timeText += minutes + ":";
             }else
             {
-                timeText += "0" + minutes + " : ";
+                timeText += "0" + minutes + ":";
             }
         }
         else
         {
-            timeText += minutes + " : ";
+            timeText += minutes + ":";
         }
 
         if (seconds < 10)
