@@ -4,7 +4,6 @@ using System;
 public partial class Game : Node2D
 {
     private int seconds = 0, minutes = 0, hours = 0;
-    private int copsEscaped = 0;
 
     private Player player;
     private Timer timeCount;
@@ -26,12 +25,6 @@ public partial class Game : Node2D
         player.GameOver += OnGameOver;
         GetNode<Button>("%RestartButton").Pressed += OnRestartPressed;
         GetNode<CanvasLayer>("GameOverHUD").ProcessMode = Node.ProcessModeEnum.WhenPaused;
-    }
-
-    private void OnCopsEscaped()
-    {
-        copsEscaped++;
-        GD.Print("Cops Escaped Total: " + copsEscaped);
     }
 
     private void OnGameOver()
