@@ -40,12 +40,12 @@ public partial class Game : Node2D
         GetTree().Paused = true;
         GetNode<CanvasLayer>("GameOverHUD").Visible = true;
         GetNode<Label>("%SurviveTimeLabel").Text = "Survive Time: " + timeText;
-        GetNode<Label>("%CopsEscapedLabel").Text = "Cops Escaped: " + Cops.totalEscaped;
+        GetNode<Label>("%CopsEscapedLabel").Text = "Escaped from cops: " + Cops.totalEscaped;
     }
 
     private void OnRestartPressed()
     {
-        GD.Print("Restart button pressed");
+        Cops.totalEscaped = 0;
         GetTree().Paused = false;
         GetTree().ReloadCurrentScene();
     }
