@@ -21,13 +21,23 @@ public partial class Player : CharacterBody2D
 
     private void OnBodyEntered(Node2D body)
     {
-        health--;
-        if (health <= 0)
+        if (body is Cops)
         {
             health = 0;
             QueueFree();
             EmitSignal(SignalName.GameOver);
         }
+        else
+        {
+            health--;
+            if (health <= 0)
+            {
+                health = 0;
+                QueueFree();
+                EmitSignal(SignalName.GameOver);
+            }
+        }
+
         GetNode<Label>("%HealthLabel").Text = "x" + health.ToString();
     }
 }

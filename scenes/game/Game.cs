@@ -4,6 +4,8 @@ using System;
 public partial class Game : Node2D
 {
     private int seconds = 0, minutes = 0, hours = 0;
+    private int copsEscaped = 0;
+
     private Player player;
     private Timer timeCount;
     private String timeText;
@@ -26,12 +28,19 @@ public partial class Game : Node2D
         GetNode<CanvasLayer>("GameOverHUD").ProcessMode = Node.ProcessModeEnum.WhenPaused;
     }
 
+    private void OnCopsEscaped()
+    {
+        copsEscaped++;
+        GD.Print("Cops Escaped Total: " + copsEscaped);
+    }
+
     private void OnGameOver()
     {
         timeCount.Stop();
         GetTree().Paused = true;
         GetNode<CanvasLayer>("GameOverHUD").Visible = true;
         GetNode<Label>("%SurviveTimeLabel").Text = "Survive Time: " + timeText;
+        GetNode<Label>("%CopsEscapedLabel").Text = "Cops Escaped: " + Cops.totalEscaped;
     }
 
     private void OnRestartPressed()

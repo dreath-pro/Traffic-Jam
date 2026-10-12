@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://sb2cxah3k64k"]
+
+[ext_resource type="Script" uid="uid://pwjhp6emdly2" path="res://scenes/cars/Cops.cs" id="1_aop4u"]
+[ext_resource type="Texture2D" uid="uid://da8evmakpvsfl" path="res://icon.svg" id="1_p6qum"]
+[ext_resource type="Texture2D" uid="uid://gk73shxpta07" path="res://assets/icons/heart_icon.png" id="3_jbxgs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
+size = Vector2(100, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssr1l"]
+size = Vector2(106, 106)
+
+[node name="Cops" type="CharacterBody2D" unique_id=1004167286]
+collision_layer = 256
+collision_mask = 263
+script = ExtResource("1_aop4u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=431050491]
+self_modulate = Color(0, 0.37227792, 0.022707945, 1)
+scale = Vector2(0.828125, 0.828125)
+texture = ExtResource("1_p6qum")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=459778629]
+shape = SubResource("RectangleShape2D_sl3ph")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1631322287]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=241673667]
+shape = SubResource("RectangleShape2D_ssr1l")
+debug_color = Color(0.6378399, 0.17257926, 0.4454865, 0.41960785)
+
+[node name="Control" type="Control" parent="." unique_id=59029752]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -53.0
+offset_top = -96.0
+offset_right = 54.0
+offset_bottom = -56.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1496353701]
+layout_mode = 0
+offset_left = -12.0
+offset_right = 116.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer" unique_id=466102178]
+layout_mode = 2
+texture = ExtResource("3_jbxgs")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HealthLabel" type="Label" parent="Control/HBoxContainer" unique_id=247971005]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "x0"
+horizontal_alignment = 1
+vertical_alignment = 1

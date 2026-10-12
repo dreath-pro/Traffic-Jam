@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://c5g6ljs8mnkrw" path="res://assets/map/grass.png" id="1_sul5r"]
 [ext_resource type="PackedScene" uid="uid://dk7ivb4q2kp1m" path="res://scenes/cars/player.tscn" id="2_7h61r"]
 [ext_resource type="PackedScene" uid="uid://bbxmlxx6u6016" path="res://scenes/cars/vehicles.tscn" id="3_0sr1o"]
+[ext_resource type="Script" uid="uid://1cagar4mqxon" path="res://scenes/game/CopSpawner.cs" id="4_bdhmt"]
 [ext_resource type="Script" uid="uid://cyefydkyrfo5o" path="res://scenes/game/VehicleSpawner.cs" id="4_kelw5"]
+[ext_resource type="PackedScene" uid="uid://sb2cxah3k64k" path="res://scenes/cars/cops.tscn" id="5_87uf6"]
 [ext_resource type="Texture2D" uid="uid://gk73shxpta07" path="res://assets/icons/heart_icon.png" id="6_5i0tg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7h61r"]
@@ -1534,6 +1536,23 @@ shape = SubResource("RectangleShape2D_ssr1l")
 position = Vector2(1157, 320)
 shape = SubResource("RectangleShape2D_5ft2r")
 
+[node name="CopSpawner" type="Node2D" parent="." unique_id=261464997]
+script = ExtResource("4_bdhmt")
+CopScene = ExtResource("5_87uf6")
+
+[node name="SpawnTimer" type="Timer" parent="CopSpawner" unique_id=1292056641]
+wait_time = 2.0
+autostart = true
+
+[node name="SpawnPoint1" type="Marker2D" parent="CopSpawner" unique_id=1308807563]
+position = Vector2(-168, 87)
+
+[node name="SpawnPoint2" type="Marker2D" parent="CopSpawner" unique_id=258453684]
+position = Vector2(-168, 321)
+
+[node name="SpawnPoint3" type="Marker2D" parent="CopSpawner" unique_id=2004002207]
+position = Vector2(-168, 551)
+
 [node name="VehicleSpawner" type="Node2D" parent="." unique_id=1803770269]
 script = ExtResource("4_kelw5")
 VehicleScene = ExtResource("3_0sr1o")
@@ -1655,6 +1674,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CopsEscapedLabel" type="Label" parent="GameOverHUD/Control/VBoxContainer" unique_id=2043841256]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
 text = "Cops Escaped: 0"
