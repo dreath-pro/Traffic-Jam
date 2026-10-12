@@ -17,7 +17,7 @@ public partial class VehicleSpawner : Node2D
             GetNode<Marker2D>("SpawnPoint3")
         };
 
-        GetNode<Timer>("Timer").Timeout += SpawnVehicle;
+        GetNode<Timer>("SpawnTimer").Timeout += SpawnVehicle;
     }
 
     private void SpawnVehicle()
