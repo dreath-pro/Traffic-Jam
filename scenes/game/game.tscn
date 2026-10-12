@@ -1541,7 +1541,7 @@ script = ExtResource("4_bdhmt")
 CopScene = ExtResource("5_87uf6")
 
 [node name="SpawnTimer" type="Timer" parent="CopSpawner" unique_id=1292056641]
-wait_time = 2.0
+wait_time = 30.0
 autostart = true
 
 [node name="SpawnPoint1" type="Marker2D" parent="CopSpawner" unique_id=1308807563]

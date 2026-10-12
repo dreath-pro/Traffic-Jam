@@ -20,10 +20,6 @@ public partial class Cops : CharacterBody2D
         {
             GD.PrintErr("Player not found! Check the player group.");
         }
-        else
-        {
-            GD.Print("Player found!");
-        }
     }
 
     public override void _PhysicsProcess(double delta)
@@ -31,7 +27,7 @@ public partial class Cops : CharacterBody2D
         if (player == null)
             return;
 
-        float followSpeed = 3.0f;
+        float followSpeed = 1.0f;
         float moveSpeed = 200.0f;
 
         float targetY = player.GlobalPosition.Y;

@@ -7,6 +7,7 @@ public partial class CopSpawner : Node2D
 
     private Marker2D[] spawnPoints;
     private RandomNumberGenerator rng = new();
+    private int rngSelected;
     
     public override void _Ready()
     {
@@ -25,10 +26,17 @@ public partial class CopSpawner : Node2D
         if (CopScene == null)
             return;
 
-        Marker2D point = spawnPoints[rng.RandiRange(0, spawnPoints.Length - 1)];
+        //0 - spawn
+        //1 - do not spawn
+        rngSelected = rng.RandiRange(0, 1);
 
-        Cops cop = CopScene.Instantiate<Cops>();
-        GetTree().CurrentScene.AddChild(cop);
-        cop.GlobalPosition = point.GlobalPosition;
+        if (rngSelected == 0)
+        {
+            Marker2D point = spawnPoints[rng.RandiRange(0, spawnPoints.Length - 1)];
+
+            Cops cop = CopScene.Instantiate<Cops>();
+            GetTree().CurrentScene.AddChild(cop);
+            cop.GlobalPosition = point.GlobalPosition;
+        }
     }
 }
