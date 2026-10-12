@@ -11,6 +11,7 @@ size = Vector2(100, 100)
 size = Vector2(106, 106)
 
 [node name="Cops" type="CharacterBody2D" unique_id=1004167286]
+scale = Vector2(0.8399994, 0.8399994)
 collision_layer = 256
 collision_mask = 775
 script = ExtResource("1_aop4u")

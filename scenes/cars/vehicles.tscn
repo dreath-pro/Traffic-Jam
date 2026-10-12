@@ -10,7 +10,7 @@ size = Vector2(119.047485, 120.23795)
 size = Vector2(130.95226, 130.95226)
 
 [node name="Vehicles" type="CharacterBody2D" unique_id=1351980439]
-scale = Vector2(0.840001, 0.840001)
+scale = Vector2(0.63999945, 0.63999945)
 collision_layer = 2
 collision_mask = 519
 script = ExtResource("1_oaoh4")

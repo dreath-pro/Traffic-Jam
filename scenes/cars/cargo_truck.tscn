@@ -7,6 +7,7 @@
 size = Vector2(425, 104)
 
 [node name="CargoTruck" type="CharacterBody2D" unique_id=1697634268]
+scale = Vector2(0.88000077, 0.88000077)
 collision_layer = 512
 collision_mask = 516
 script = ExtResource("1_ldmbb")
