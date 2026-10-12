@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class CopSpawner : Node2D
+public partial class FrontSpawn : Node2D
 {
     [Export] public PackedScene CopScene { get; set; }
 

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://mjwkvght0c0h"]
+
+[ext_resource type="Script" uid="uid://f0fyw435xk67" path="res://scenes/cars/CargoTruck.cs" id="1_ldmbb"]
+[ext_resource type="Texture2D" uid="uid://da8evmakpvsfl" path="res://icon.svg" id="1_p03vw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
+size = Vector2(425, 104)
+
+[node name="CargoTruck" type="CharacterBody2D" unique_id=1697634268]
+collision_layer = 512
+collision_mask = 516
+script = ExtResource("1_ldmbb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1990762671]
+self_modulate = Color(0.5258396, 0.47205794, 1.92523e-07, 1)
+scale = Vector2(3.53125, 0.87499994)
+texture = ExtResource("1_p03vw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=717920438]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_sl3ph")

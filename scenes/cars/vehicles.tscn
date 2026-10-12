@@ -12,7 +12,7 @@ size = Vector2(130.95226, 130.95226)
 [node name="Vehicles" type="CharacterBody2D" unique_id=1351980439]
 scale = Vector2(0.840001, 0.840001)
 collision_layer = 2
-collision_mask = 7
+collision_mask = 519
 script = ExtResource("1_oaoh4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2145692527]
@@ -26,7 +26,7 @@ shape = SubResource("RectangleShape2D_sl3ph")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1054443945]
 collision_layer = 16
-collision_mask = 277
+collision_mask = 789
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1358824892]
 position = Vector2(3.0511865e-06, 3.5478913e-06)
