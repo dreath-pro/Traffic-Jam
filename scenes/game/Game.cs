@@ -6,6 +6,7 @@ public partial class Game : Node2D
     private int seconds = 0, minutes = 0, hours = 0;
     private Player player;
     private Timer timeCount;
+    private String timeText;
 
     public override void _Process(double delta)
     {
@@ -30,6 +31,7 @@ public partial class Game : Node2D
         timeCount.Stop();
         GetTree().Paused = true;
         GetNode<CanvasLayer>("GameOverHUD").Visible = true;
+        GetNode<Label>("%SurviveTimeLabel").Text = "Survive Time: " + timeText;
     }
 
     private void OnRestartPressed()
@@ -92,6 +94,7 @@ public partial class Game : Node2D
             timeText += seconds;
         }
 
-        GetNode<Label>("%TimeLabel").Text = timeText;
+        this.timeText = timeText;
+        GetNode<Label>("%TimeLabel").Text = this.timeText;
     }
 }
