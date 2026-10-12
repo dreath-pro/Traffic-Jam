@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Diagnostics;
 
 public partial class FrontSpawn : Node2D
 {
@@ -35,6 +36,7 @@ public partial class FrontSpawn : Node2D
             Marker2D point = spawnPoints[rng.RandiRange(0, spawnPoints.Length - 1)];
 
             Cops cop = CopScene.Instantiate<Cops>();
+            GetNode<Node2D>("../Actors").AddChild(cop);
             GetTree().CurrentScene.AddChild(cop);
             cop.GlobalPosition = point.GlobalPosition;
         }

@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Diagnostics;
 
 public partial class BackSpawn : Node2D
 {
@@ -39,7 +40,8 @@ public partial class BackSpawn : Node2D
             return;
 
         Node2D truck = TruckScene.Instantiate<Node2D>();
-        GetTree().CurrentScene.AddChild(truck);
+        //GetTree().CurrentScene.AddChild(truck);
+        GetNode<Node2D>("../Actors").AddChild(truck);
 
         Marker2D point = spawnPoints[rng.RandiRange(0, spawnPoints.Length - 1)];
         truck.GlobalPosition = point.GlobalPosition;
@@ -53,7 +55,8 @@ public partial class BackSpawn : Node2D
         Marker2D point = spawnPoints[rng.RandiRange(0, spawnPoints.Length - 1)];
 
         Vehicles vehicle = VehicleScene.Instantiate<Vehicles>();
-        GetTree().CurrentScene.AddChild(vehicle);
+        //GetTree().CurrentScene.AddChild(vehicle);
+        GetNode<Node2D>("../Actors").AddChild(vehicle);
         vehicle.GlobalPosition = point.GlobalPosition;
     }
 }

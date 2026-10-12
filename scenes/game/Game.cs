@@ -19,7 +19,8 @@ public partial class Game : Node2D
         timeCount = GetNode<Timer>("%TimeCount");
         timeCount.Timeout += DisplayTime;
 
-        player = GetNode<Player>("Player");
+        player = GetNode<Player>("%Player");
+        GD.Print("Can you like output my health? " + player.health);
         GetNode<Label>("%HealthLabel").Text = "x" + player.health;
 
         player.GameOver += OnGameOver;
