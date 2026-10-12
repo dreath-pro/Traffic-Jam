@@ -23,21 +23,28 @@ public partial class Player : CharacterBody2D
     {
         if (body is Cops)
         {
-            health = 0;
-            QueueFree();
-            EmitSignal(SignalName.GameOver);
+            health -= 3;
+            if (health <= 0)
+            {
+                gameOverLogic();
+            }
         }
         else
         {
             health--;
             if (health <= 0)
             {
-                health = 0;
-                QueueFree();
-                EmitSignal(SignalName.GameOver);
+                gameOverLogic();
             }
         }
 
         GetNode<Label>("%HealthLabel").Text = "x" + health.ToString();
+    }
+
+    private void gameOverLogic()
+    {
+        health = 0;
+        QueueFree();
+        EmitSignal(SignalName.GameOver);
     }
 }

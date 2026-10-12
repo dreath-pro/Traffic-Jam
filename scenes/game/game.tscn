@@ -1518,10 +1518,10 @@ unique_name_in_owner = true
 position = Vector2(194, 317)
 
 [node name="Vehicles" parent="Actors" unique_id=1351980439 instance=ExtResource("3_0sr1o")]
-position = Vector2(-188, -203.00002)
+position = Vector2(-198, -182.00002)
 
 [node name="Cops" parent="Actors" unique_id=1004167286 instance=ExtResource("5_87uf6")]
-position = Vector2(1396.0001, 106.000015)
+position = Vector2(3051, -297.99997)
 
 [node name="MapBorderY" type="StaticBody2D" parent="." unique_id=1973475841]
 collision_layer = 4
