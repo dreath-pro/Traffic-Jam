@@ -1,26 +1,46 @@
 [gd_scene format=3 uid="uid://dk7ivb4q2kp1m"]
 
 [ext_resource type="Script" uid="uid://duy6kbsqidlu7" path="res://scenes/cars/Player.cs" id="1_j51pt"]
-[ext_resource type="Texture2D" uid="uid://b6m77cvwu3tyy" path="res://assets/cars/monke_car.png" id="2_j51pt"]
+[ext_resource type="Texture2D" uid="uid://cfia8vft61eqw" path="res://assets/cars/player/player_car1.png" id="2_r0dsj"]
+[ext_resource type="Texture2D" uid="uid://cgxgur6vs34kh" path="res://assets/cars/player/player_car2.png" id="3_tv1jx"]
+[ext_resource type="Texture2D" uid="uid://bdvi3qub6n0tn" path="res://assets/cars/player/player_car3.png" id="4_cohvq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sl3ph"]
+animations = [{
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("2_r0dsj")
+}, {
+"duration": 0.3,
+"texture": ExtResource("3_tv1jx")
+}, {
+"duration": 0.3,
+"texture": ExtResource("4_cohvq")
+}],
+"loop": 1,
+"name": &"run_idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
-size = Vector2(66.53841, 15.769217)
+size = Vector2(69.99994, 14.230758)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssr1l"]
-size = Vector2(66.92302, 18.846138)
+size = Vector2(72.692245, 17.307678)
 
 [node name="Player" type="CharacterBody2D" unique_id=2040709646]
 scale = Vector2(2.6000023, 2.6000023)
 collision_mask = 782
 script = ExtResource("1_j51pt")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=266139348]
-texture_filter = 1
-scale = Vector2(0.9274174, 0.9274174)
-texture = ExtResource("2_j51pt")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=560866576]
+sprite_frames = SubResource("SpriteFrames_sl3ph")
+animation = &"run_idle"
+autoplay = "run_idle"
+frame_progress = 0.40441775
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=99213374]
-position = Vector2(0.19230652, 19.807676)
+position = Vector2(0.76923186, 20.576908)
 shape = SubResource("RectangleShape2D_sl3ph")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1816587387]
@@ -28,6 +48,6 @@ collision_layer = 0
 collision_mask = 770
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=780188687]
-position = Vector2(0.38461524, 19.807676)
+position = Vector2(0.5769217, 20.576908)
 shape = SubResource("RectangleShape2D_ssr1l")
 debug_color = Color(0.93385285, 0.21728754, 0.3629396, 0.41960785)

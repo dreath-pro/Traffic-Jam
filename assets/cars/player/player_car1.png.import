@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6m77cvwu3tyy"
-path="res://.godot/imported/monke_car.png-3649f5a81169247f90a30c0629263043.ctex"
+uid="uid://cfia8vft61eqw"
+path="res://.godot/imported/player_car1.png-509b5c2dbd2e50f2b0f61b0e4a17d78c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cars/monke_car.png"
-dest_files=["res://.godot/imported/monke_car.png-3649f5a81169247f90a30c0629263043.ctex"]
+source_file="res://assets/cars/player/player_car1.png"
+dest_files=["res://.godot/imported/player_car1.png-509b5c2dbd2e50f2b0f61b0e4a17d78c.ctex"]
 
 [params]
 

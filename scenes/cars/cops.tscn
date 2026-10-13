@@ -1,14 +1,33 @@
 [gd_scene format=3 uid="uid://sb2cxah3k64k"]
 
 [ext_resource type="Script" uid="uid://pwjhp6emdly2" path="res://scenes/cars/Cops.cs" id="1_aop4u"]
-[ext_resource type="Texture2D" uid="uid://b6m77cvwu3tyy" path="res://assets/cars/monke_car.png" id="2_jbxgs"]
+[ext_resource type="Texture2D" uid="uid://cfia8vft61eqw" path="res://assets/cars/player/player_car1.png" id="2_v05iq"]
 [ext_resource type="Texture2D" uid="uid://gk73shxpta07" path="res://assets/icons/heart_icon.png" id="3_jbxgs"]
+[ext_resource type="Texture2D" uid="uid://cgxgur6vs34kh" path="res://assets/cars/player/player_car2.png" id="3_vw006"]
+[ext_resource type="Texture2D" uid="uid://bdvi3qub6n0tn" path="res://assets/cars/player/player_car3.png" id="4_qyiv0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sl3ph"]
+animations = [{
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("2_v05iq")
+}, {
+"duration": 0.3,
+"texture": ExtResource("3_vw006")
+}, {
+"duration": 0.3,
+"texture": ExtResource("4_qyiv0")
+}],
+"loop": 1,
+"name": &"run_idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
-size = Vector2(59.166656, 12.500008)
+size = Vector2(61.84211, 11.513157)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssr1l"]
-size = Vector2(59.539497, 15.789471)
+size = Vector2(63.815792, 13.486845)
 
 [node name="Cops" type="CharacterBody2D" unique_id=1004167286]
 scale = Vector2(3.0399983, 3.0399983)
@@ -16,15 +35,17 @@ collision_layer = 256
 collision_mask = 775
 script = ExtResource("1_aop4u")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=431050491]
-self_modulate = Color(0, 0.37227792, 0.022707945, 1)
-texture_filter = 1
-scale = Vector2(0.828125, 0.828125)
-texture = ExtResource("2_jbxgs")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=980909728]
+self_modulate = Color(0, 0.37254903, 0.023529412, 1)
+scale = Vector2(0.871711, 0.8717109)
+sprite_frames = SubResource("SpriteFrames_sl3ph")
+animation = &"run_idle"
+autoplay = "run_idle"
+frame_progress = 0.09817923
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=459778629]
-position = Vector2(0.41666535, 17.43422)
-scale = Vector2(1.0000002, 1.0000002)
+position = Vector2(0.32894638, 19.243435)
+scale = Vector2(1.0000005, 1.0000005)
 shape = SubResource("RectangleShape2D_sl3ph")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1631322287]
@@ -32,7 +53,7 @@ collision_layer = 0
 collision_mask = 514
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=241673667]
-position = Vector2(0.49341935, 17.434223)
+position = Vector2(0.32894662, 19.243435)
 scale = Vector2(1.0000005, 1.0000005)
 shape = SubResource("RectangleShape2D_ssr1l")
 debug_color = Color(0.6378399, 0.17257926, 0.4454865, 0.41960785)
