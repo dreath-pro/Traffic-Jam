@@ -1613,13 +1613,13 @@ wait_time = 1.5
 autostart = true
 
 [node name="SpawnPoint1" type="Marker2D" parent="BackSpawn" unique_id=1852238697]
-position = Vector2(1290, 87)
+position = Vector2(1694, 87)
 
 [node name="SpawnPoint2" type="Marker2D" parent="BackSpawn" unique_id=1532745184]
-position = Vector2(1290, 321)
+position = Vector2(1694, 321)
 
 [node name="SpawnPoint3" type="Marker2D" parent="BackSpawn" unique_id=1215501511]
-position = Vector2(1290, 551)
+position = Vector2(1694, 551)
 
 [node name="TimerHUD" type="CanvasLayer" parent="." unique_id=42063304]
 script = SubResource("CSharpScript_lfrn8")

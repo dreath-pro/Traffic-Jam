@@ -1,22 +1,48 @@
 [gd_scene format=3 uid="uid://mjwkvght0c0h"]
 
 [ext_resource type="Script" uid="uid://f0fyw435xk67" path="res://scenes/cars/CargoTruck.cs" id="1_ldmbb"]
-[ext_resource type="Texture2D" uid="uid://da8evmakpvsfl" path="res://icon.svg" id="1_p03vw"]
+[ext_resource type="Texture2D" uid="uid://60f6xft12my" path="res://assets/cars/truck/cargo_truck1.png" id="3_ypjf2"]
+[ext_resource type="Texture2D" uid="uid://ustcji7wxurd" path="res://assets/cars/truck/cargo_truck2.png" id="4_tm2r7"]
+[ext_resource type="Texture2D" uid="uid://cfp76wuiewslw" path="res://assets/cars/truck/cargo_truck3.png" id="5_i5rrq"]
+[ext_resource type="Texture2D" uid="uid://djv37rks31ccl" path="res://assets/cars/truck/cargo_truck4.png" id="6_q02en"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sl3ph"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("3_ypjf2")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_tm2r7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("5_i5rrq")
+}, {
+"duration": 0.5,
+"texture": ExtResource("6_q02en")
+}],
+"loop": 1,
+"name": &"run_idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
-size = Vector2(425, 104)
+size = Vector2(430.68146, 35.087723)
 
 [node name="CargoTruck" type="CharacterBody2D" unique_id=1697634268]
-scale = Vector2(0.88000077, 0.88000077)
+scale = Vector2(2.2799997, 2.2799997)
 collision_layer = 512
 collision_mask = 516
 script = ExtResource("1_ldmbb")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1990762671]
-self_modulate = Color(0.5258396, 0.47205794, 1.92523e-07, 1)
-scale = Vector2(3.53125, 0.87499994)
-texture = ExtResource("1_p03vw")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=928762528]
+position = Vector2(-6.2499866, -1.1363655)
+scale = Vector2(2.0499983, 1.4545441)
+sprite_frames = SubResource("SpriteFrames_sl3ph")
+animation = &"run_idle"
+autoplay = "run_idle"
+frame_progress = 0.063984126
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=717920438]
-position = Vector2(-0.5, 0)
+position = Vector2(-1.7045445, 35.964916)
 shape = SubResource("RectangleShape2D_sl3ph")
