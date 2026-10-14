@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgxgur6vs34kh"
-path="res://.godot/imported/player_car2.png-d2dce321761b2f8b3169f6a1f51382a8.ctex"
+uid="uid://ekwwd14a3h4w"
+path="res://.godot/imported/pig1.png-bf64cb78af27274d1476ad40c69d187b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cars/player/player_car2.png"
-dest_files=["res://.godot/imported/player_car2.png-d2dce321761b2f8b3169f6a1f51382a8.ctex"]
+source_file="res://assets/cars/npc/character/pig1.png"
+dest_files=["res://.godot/imported/pig1.png-bf64cb78af27274d1476ad40c69d187b.ctex"]
 
 [params]
 
