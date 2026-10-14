@@ -1,7 +1,7 @@
 # Traffic Jam 🚗
 A 2d top-down dodge vehicle arcade built with **Godot Engine**.
 
-> *Dodge an unpredictable vehicle and outmaneuver a chasing cops to last long in the road*
+> *Dodge unpredictable traffic, outmaneuver pursuing police, and survive as long as you can on the road.*
 
 <img width="1149" height="641" alt="Screenshot 2026-10-14 230304" src="https://github.com/user-attachments/assets/a8d1ed15-8c56-4e42-b1c2-d305d7b06c9b" />
 <img width="1153" height="643" alt="Screenshot 2026-10-14 230340" src="https://github.com/user-attachments/assets/edc4fa95-389d-4405-b96d-cd2a1fa8822d" />
@@ -13,8 +13,8 @@ A 2d top-down dodge vehicle arcade built with **Godot Engine**.
 
 ## 🎮 Features & Mechanics
 * **Top-Down Player Movement:** Smooth movement using Godot's `CharacterBody2D`.
-* **Vehicle AI:** Vehicles NPC will randomly move anywhere, watch out.
-* **Health System:** Everytime you crash with any vehicles, your health will drain.
+* **Vehicle AI:** Dodge unpredictable NPC vehicles that change direction and move across the road.
+* **Health System:** Collisions with other vehicles reduce the player's health.
 
 ---
 
@@ -36,7 +36,7 @@ A 2d top-down dodge vehicle arcade built with **Godot Engine**.
 ---
 
 ## Planned features
-* Add a health or repair system
+* Add health recovery or vehicle repair mechanics.
 * Add currency or points
 * Leaderboard system
 * Vehicle and Character customization
