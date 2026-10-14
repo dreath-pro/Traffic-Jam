@@ -14,3 +14,16 @@ obj/
 *.user
 *.userosscache
 *.sln.ide
+
+# Compiled .NET files
+*.dll
+*.pdb
+*.deps.json
+*.runtimeconfig.json
+
+# Build output folders
+[Bb]in/
+[Oo]bj/
+
+# .NET generated files
+mono_crash.*.json
