@@ -15,6 +15,29 @@ public partial class Vehicles : CharacterBody2D
     {
         MoveAndSlide();
 
+        for (int i = 0; i < GetSlideCollisionCount(); i++)
+        {
+            var collision = GetSlideCollision(i);
+            var body = collision.GetCollider();
+
+            if (body is Vehicles vehicle)
+            {
+                QueueFree();
+            }
+            else if (body is Cops cop)
+            {
+                QueueFree();
+            }
+            else if (body is CargoTruck truck)
+            {
+                QueueFree();
+            }else if (body is Player player)
+            {
+                player.takeDamage(1);
+                QueueFree();
+            }
+        }
+
         if (GlobalPosition.X < -100)
             QueueFree();
     }
@@ -26,10 +49,6 @@ public partial class Vehicles : CharacterBody2D
 
         characterAnimateSprite = GetNode<AnimatedSprite2D>("Character");
         randomCharacterAnimation();
-
-        Area2D hitbox = GetNode<Area2D>("Hitbox");
-        hitbox.BodyEntered += OnBodyEntered;
-        hitbox.AreaEntered += OnAreaEntered;
 
         Timer decision = GetNode<Timer>("Decision");
         decision.Timeout += Decision;
@@ -124,15 +143,5 @@ public partial class Vehicles : CharacterBody2D
                 MoveLeftDown();
                 break;
         }
-    }
-
-    private void OnAreaEntered(Area2D area)
-    {   
-        QueueFree();
-    }
-
-    private void OnBodyEntered(Node2D body)
-    {
-        QueueFree();
     }
 }

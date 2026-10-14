@@ -164,9 +164,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
 size = Vector2(93.90256, 18.056671)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssr1l"]
-size = Vector2(73.387184, 11.750505)
-
 [node name="Vehicles" type="CharacterBody2D" unique_id=1351980439]
 scale = Vector2(2.4799976, 2.4799976)
 collision_layer = 2
@@ -178,26 +175,17 @@ characterAnimationNames = Array[String](["golden_lab", "human", "pig"])
 [node name="Character" type="AnimatedSprite2D" parent="." unique_id=2050291940]
 sprite_frames = SubResource("SpriteFrames_w7gkp")
 animation = &"golden_lab"
-frame_progress = 0.7481389
+frame_progress = 0.109151505
 
 [node name="Car" type="AnimatedSprite2D" parent="." unique_id=1342503619]
 sprite_frames = SubResource("SpriteFrames_suqk4")
 animation = &"yellow"
+frame_progress = 0.25686848
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2030877195]
 position = Vector2(0.46296516, 21.774214)
 scale = Vector2(0.75925905, 0.75925905)
 shape = SubResource("RectangleShape2D_sl3ph")
-
-[node name="Hitbox" type="Area2D" parent="." unique_id=1054443945]
-collision_layer = 16
-collision_mask = 789
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1358824892]
-position = Vector2(0.40322348, 21.774214)
-scale = Vector2(0.9999998, 1.372626)
-shape = SubResource("RectangleShape2D_ssr1l")
-debug_color = Color(0.96920174, 0, 0.46601945, 0.41960785)
 
 [node name="Decision" type="Timer" parent="." unique_id=1316082713]
 wait_time = 3.0

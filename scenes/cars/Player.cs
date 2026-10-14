@@ -11,32 +11,29 @@ public partial class Player : CharacterBody2D
         Vector2 direction = Input.GetVector("move_left", "move_right", "move_up", "move_down");
         Velocity = direction * 380;
         MoveAndSlide();
-    }
 
-    public override void _Ready()
-    {
-        Area2D hitbox = GetNode<Area2D>("Hitbox");
-        hitbox.BodyEntered += OnBodyEntered;
-    }
-
-    private void OnBodyEntered(Node2D body)
-    {
-        GD.Print("Something entered on player: ");
-        if (body is Cops)
+        for (int i = 0; i < GetSlideCollisionCount(); i++)
         {
-            health -= 3;
-            if (health <= 0)
+            var collision = GetSlideCollision(i);
+            var body = collision.GetCollider();
+
+            if (body is Cops cop)
             {
-                gameOverLogic();
+                takeDamage(3);
+            }
+            else if (body is CargoTruck truck)
+            {
+                takeDamage(1);
             }
         }
-        else
+    }
+
+    public void takeDamage(int amount)
+    {
+        health -= amount;
+        if (health <= 0)
         {
-            health--;
-            if (health <= 0)
-            {
-                gameOverLogic();
-            }
+            gameOverLogic();
         }
 
         GetNode<Label>("%HealthLabel").Text = "x" + health.ToString();

@@ -28,10 +28,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
-size = Vector2(82.894745, 15.131586)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssr1l"]
-size = Vector2(84.86842, 17.10526)
+size = Vector2(82.894745, 15.383136)
 
 [node name="Cops" type="CharacterBody2D" unique_id=1004167286]
 scale = Vector2(2.7199988, 2.7199988)
@@ -44,22 +41,12 @@ scale = Vector2(1.1710527, 1.1710527)
 sprite_frames = SubResource("SpriteFrames_ssr1l")
 animation = &"run_idle"
 autoplay = "run_idle"
-frame_progress = 0.48415738
+frame_progress = 0.4857235
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=459778629]
-position = Vector2(0.65789616, 21.052647)
-scale = Vector2(1.0000005, 1.0000005)
+position = Vector2(0.6578961, 20.92687)
+scale = Vector2(1.0000004, 1.0000004)
 shape = SubResource("RectangleShape2D_sl3ph")
-
-[node name="Hitbox" type="Area2D" parent="." unique_id=1631322287]
-collision_layer = 0
-collision_mask = 514
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=241673667]
-position = Vector2(0.6578982, 21.052647)
-scale = Vector2(1.0000005, 1.0000005)
-shape = SubResource("RectangleShape2D_ssr1l")
-debug_color = Color(0.6378399, 0.17257926, 0.4454865, 0.41960785)
 
 [node name="Control" type="Control" parent="." unique_id=59029752]
 layout_mode = 3

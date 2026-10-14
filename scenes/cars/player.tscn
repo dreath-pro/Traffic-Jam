@@ -43,10 +43,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
-size = Vector2(69.99994, 14.230758)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssr1l"]
-size = Vector2(72.692245, 17.307678)
+size = Vector2(71.153786, 14.230758)
 
 [node name="Player" type="CharacterBody2D" unique_id=2040709646]
 scale = Vector2(2.6000023, 2.6000023)
@@ -57,23 +54,14 @@ script = ExtResource("1_j51pt")
 sprite_frames = SubResource("SpriteFrames_ssr1l")
 animation = &"run_idle"
 autoplay = "run_idle"
-frame_progress = 0.6357666
+frame_progress = 0.38097838
 
 [node name="Car" type="AnimatedSprite2D" parent="." unique_id=1747784089]
 sprite_frames = SubResource("SpriteFrames_ss0ko")
 animation = &"run_idle"
 autoplay = "run_idle"
-frame_progress = 0.8734861
+frame_progress = 0.61869645
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=99213374]
-position = Vector2(0.76923186, 20.576908)
+position = Vector2(0.5769215, 21.730755)
 shape = SubResource("RectangleShape2D_sl3ph")
-
-[node name="Hitbox" type="Area2D" parent="." unique_id=1816587387]
-collision_layer = 0
-collision_mask = 770
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=780188687]
-position = Vector2(0.5769217, 20.576908)
-shape = SubResource("RectangleShape2D_ssr1l")
-debug_color = Color(0.93385285, 0.21728754, 0.3629396, 0.41960785)

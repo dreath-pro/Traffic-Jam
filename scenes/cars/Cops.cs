@@ -11,9 +11,6 @@ public partial class Cops : CharacterBody2D
     {
         GetNode<Label>("%HealthLabel").Text = "x" + health.ToString();
 
-        Area2D hitbox = GetNode<Area2D>("Hitbox");
-        hitbox.BodyEntered += OnBodyEntered;
-
         player = GetTree().GetFirstNodeInGroup("player") as Player;
 
         if (player == null)
@@ -36,6 +33,21 @@ public partial class Cops : CharacterBody2D
         Velocity = new Vector2(moveSpeed, (newY - GlobalPosition.Y) / (float)delta);
         MoveAndSlide();
 
+        for (int i = 0; i < GetSlideCollisionCount(); i++)
+        {
+            var collision = GetSlideCollision(i);
+            var body = collision.GetCollider();
+
+            if (body is Vehicles vehicle)
+            {
+                takeDamage(1);
+            }
+            else if (body is CargoTruck truck)
+            {
+                takeDamage(1);
+            }
+        }
+
         if (GlobalPosition.X > 1290)
         {
             if (GlobalPosition.X < 2000)
@@ -48,9 +60,9 @@ public partial class Cops : CharacterBody2D
         }
     }
 
-    private void OnBodyEntered(Node2D body)
+    public void takeDamage(int amount)
     {
-        health--;
+        health -= amount;
 
         if (health <= 0)
         {
