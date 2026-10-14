@@ -27,7 +27,7 @@ public partial class BackSpawn : Node2D
     {
         SpawnVehicle();
 
-        selectedSpawn = rng.RandiRange(0, 10);
+        selectedSpawn = rng.RandiRange(0, 15);
         if (selectedSpawn == 0)
             SpawnTruck();
         else
