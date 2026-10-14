@@ -3,11 +3,11 @@ A 2d top-down dodge vehicle arcade built with **Godot Engine**.
 
 > *Dodge an unpredictable vehicle and outmaneuver a chasing cops to last long in the road*
 
-<img width="1150" height="648" alt="Screenshot 2026-10-13 223105" src="https://github.com/user-attachments/assets/a90a4dec-c203-4514-a968-6715f62a511a" />
-<img width="1147" height="646" alt="Screenshot 2026-10-13 223113" src="https://github.com/user-attachments/assets/d126f462-ea00-4510-884a-6881dcb106e0" />
-<img width="1151" height="644" alt="Screenshot 2026-10-13 223135" src="https://github.com/user-attachments/assets/0b7bc87f-89a9-4ced-b7de-0115c01be221" />
-<img width="1149" height="646" alt="Screenshot 2026-10-13 223251" src="https://github.com/user-attachments/assets/30ffed97-4373-4a51-8339-c5ca4d9e3703" />
-<img width="1149" height="641" alt="Screenshot 2026-10-13 223302" src="https://github.com/user-attachments/assets/74a5aa33-bd82-4699-a44d-ad2e7006bab6" />
+<img width="1149" height="641" alt="Screenshot 2026-10-14 230304" src="https://github.com/user-attachments/assets/a8d1ed15-8c56-4e42-b1c2-d305d7b06c9b" />
+<img width="1153" height="643" alt="Screenshot 2026-10-14 230340" src="https://github.com/user-attachments/assets/edc4fa95-389d-4405-b96d-cd2a1fa8822d" />
+<img width="1150" height="643" alt="Screenshot 2026-10-14 230412" src="https://github.com/user-attachments/assets/e48770ef-f99b-46b8-b029-34b2ddf8f10c" />
+<img width="1149" height="645" alt="Screenshot 2026-10-14 230508" src="https://github.com/user-attachments/assets/1cf0983d-5d2f-4b9f-8b30-85bcbe03b358" />
+<img width="1149" height="645" alt="Screenshot 2026-10-14 230518" src="https://github.com/user-attachments/assets/bfe0a228-6ea5-4c5f-a1c0-23ffb49cc987" />
 
 ---
 
