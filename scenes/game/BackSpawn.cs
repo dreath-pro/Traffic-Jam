@@ -5,7 +5,6 @@ using System.Diagnostics;
 public partial class BackSpawn : Node2D
 {
     [Export] public PackedScene VehicleScene { get; set; }
-    //[Export] public PackedScene CharacterScene { get; set; }
     [Export] public PackedScene TruckScene { get; set; }
 
     private Marker2D[] spawnPoints;
