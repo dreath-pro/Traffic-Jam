@@ -177,11 +177,12 @@ characterAnimationNames = Array[String](["golden_lab", "human", "pig"])
 
 [node name="Character" type="AnimatedSprite2D" parent="." unique_id=2050291940]
 sprite_frames = SubResource("SpriteFrames_w7gkp")
-animation = &"pig"
+animation = &"golden_lab"
+frame_progress = 0.7481389
 
 [node name="Car" type="AnimatedSprite2D" parent="." unique_id=1342503619]
 sprite_frames = SubResource("SpriteFrames_suqk4")
-animation = &"blue"
+animation = &"yellow"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2030877195]
 position = Vector2(0.46296516, 21.774214)
