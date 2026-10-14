@@ -21,6 +21,7 @@ public partial class Player : CharacterBody2D
 
     private void OnBodyEntered(Node2D body)
     {
+        GD.Print("Something entered on player: ");
         if (body is Cops)
         {
             health -= 3;

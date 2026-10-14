@@ -75,7 +75,7 @@ public partial class Vehicles : CharacterBody2D
     }
 
     private void OnAreaEntered(Area2D area)
-    {
+    {   
         QueueFree();
     }
 
