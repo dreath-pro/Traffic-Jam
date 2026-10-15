@@ -8,6 +8,19 @@
 [ext_resource type="Texture2D" uid="uid://rgqx37wqslty" path="res://assets/cars/player/car/player_car1.png" id="5_ss0ko"]
 [ext_resource type="Texture2D" uid="uid://c1tmqpvi0ibm5" path="res://assets/cars/player/car/player_car2.png" id="6_r1jvk"]
 [ext_resource type="Texture2D" uid="uid://dpm8kvl64i6wj" path="res://assets/cars/player/car/player_car3.png" id="7_3irbb"]
+[ext_resource type="Texture2D" uid="uid://jlryee7rngwu" path="res://assets/icons/arrow_indicator/arrow_indicator1.png" id="9_a22i7"]
+[ext_resource type="Texture2D" uid="uid://g41ifaiohb2u" path="res://assets/icons/arrow_indicator/arrow_indicator2.png" id="10_yv374"]
+[ext_resource type="Texture2D" uid="uid://dlxeq4i8rr8or" path="res://assets/icons/arrow_indicator/arrow_indicator3.png" id="11_oq5c7"]
+[ext_resource type="Texture2D" uid="uid://csg66hhkmelut" path="res://assets/icons/arrow_indicator/arrow_indicator4.png" id="12_xjc6k"]
+[ext_resource type="Texture2D" uid="uid://bmq8ppwaskgqs" path="res://assets/icons/arrow_indicator/arrow_indicator5.png" id="13_0lc7d"]
+[ext_resource type="Texture2D" uid="uid://bcge086atb3jg" path="res://assets/icons/arrow_indicator/arrow_indicator6.png" id="14_ody2y"]
+[ext_resource type="Texture2D" uid="uid://d3td8gcgjpot8" path="res://assets/icons/arrow_indicator/arrow_indicator7.png" id="15_07gj0"]
+[ext_resource type="Texture2D" uid="uid://l7w1hf7vv0lp" path="res://assets/icons/arrow_indicator/arrow_indicator8.png" id="16_eqrlq"]
+[ext_resource type="Texture2D" uid="uid://ttlxpjutj73s" path="res://assets/icons/arrow_indicator/arrow_indicator9.png" id="17_skgk8"]
+[ext_resource type="Texture2D" uid="uid://cr848c4tjvem3" path="res://assets/icons/arrow_indicator/arrow_indicator10.png" id="18_jrs6o"]
+[ext_resource type="Texture2D" uid="uid://deu1tkrsakkbn" path="res://assets/icons/arrow_indicator/arrow_indicator11.png" id="19_ge721"]
+[ext_resource type="Texture2D" uid="uid://b80xciiw84ka3" path="res://assets/icons/arrow_indicator/arrow_indicator12.png" id="20_ihwmp"]
+[ext_resource type="Texture2D" uid="uid://ck1jwjjhutj0b" path="res://assets/icons/arrow_indicator/arrow_indicator13.png" id="21_ydki2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ssr1l"]
 animations = [{
@@ -43,6 +56,53 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_sl3ph"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_a22i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yv374")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_oq5c7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xjc6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_0lc7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ody2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_07gj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_eqrlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_skgk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_jrs6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ge721")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ihwmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ydki2")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
 size = Vector2(71.153786, 14.230758)
 
@@ -67,6 +127,15 @@ sprite_frames = SubResource("SpriteFrames_ss0ko")
 animation = &"run_idle"
 autoplay = "run_idle"
 frame_progress = 0.61869645
+
+[node name="ArrowIndicator" type="AnimatedSprite2D" parent="." unique_id=329728138]
+position = Vector2(0, -44.99996)
+scale = Vector2(0.3136174, 0.3136174)
+sprite_frames = SubResource("SpriteFrames_sl3ph")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.20622782
+speed_scale = 8.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=99213374]
 position = Vector2(0.5769215, 21.730755)
