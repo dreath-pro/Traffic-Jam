@@ -129,12 +129,14 @@ autoplay = "run_idle"
 frame_progress = 0.61869645
 
 [node name="ArrowIndicator" type="AnimatedSprite2D" parent="." unique_id=329728138]
+texture_filter = 1
 position = Vector2(0, -44.99996)
 scale = Vector2(0.3136174, 0.3136174)
 sprite_frames = SubResource("SpriteFrames_sl3ph")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.20622782
+frame = 2
+frame_progress = 0.5552245
 speed_scale = 8.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=99213374]

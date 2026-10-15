@@ -37,11 +37,13 @@ collision_mask = 516
 script = ExtResource("1_ldmbb")
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=577612846]
+texture_filter = 1
 position = Vector2(-1.5624869, 35.9375)
 scale = Vector2(6.71875, 2.486979)
 texture = ExtResource("2_ypjf2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=928762528]
+texture_filter = 1
 position = Vector2(-6.2499866, -1.1363655)
 scale = Vector2(2.0499983, 1.4545441)
 sprite_frames = SubResource("SpriteFrames_sl3ph")
