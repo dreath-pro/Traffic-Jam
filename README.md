@@ -34,7 +34,7 @@ A 2D top-down vehicle-dodging arcade game built with **Godot Engine**.
 
 ## 🚧 Development Status
 
-**Status:** Early Development · **Platform:** Windows · **Version:** v0.1.0
+**Status:** Early Development · **Platform:** Windows · **Version:** v0.2.0
 
 Gameplay mechanics and features are still being developed, so you may encounter bugs, balancing issues, or unfinished content.
 
