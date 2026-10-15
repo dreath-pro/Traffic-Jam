@@ -37,7 +37,6 @@ public partial class FrontSpawn : Node2D
 
             Cops cop = CopScene.Instantiate<Cops>();
             GetNode<Node2D>("../Actors").AddChild(cop);
-            GetTree().CurrentScene.AddChild(cop);
             cop.GlobalPosition = point.GlobalPosition;
         }
     }

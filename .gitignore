@@ -33,3 +33,5 @@ mono_crash.*.json
 /build/
 *.pck
 *.exe
+*.apk
+*.apk.idsig
