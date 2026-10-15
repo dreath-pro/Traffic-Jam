@@ -13,6 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://cox4cof3ma27g" path="res://assets/map/road_lane.png" id="6_5v6r0"]
 [ext_resource type="Texture2D" uid="uid://brbs1in24a6gw" path="res://assets/map/road_small_line.png" id="7_uyinl"]
 [ext_resource type="PackedScene" uid="uid://mjwkvght0c0h" path="res://scenes/cars/cargo_truck.tscn" id="8_2a8rs"]
+[ext_resource type="Script" uid="uid://fxb6vulmdmbw" path="res://scenes/game/MobileControls.cs" id="14_ftsea"]
+[ext_resource type="Texture2D" uid="uid://dbll3s8yx4k81" path="res://assets/icons/up_button.png" id="15_otnwt"]
+[ext_resource type="Texture2D" uid="uid://balkhfv7ejnx2" path="res://assets/icons/down_button.png" id="16_3xj4h"]
+[ext_resource type="Texture2D" uid="uid://d4l6liimkpbvs" path="res://assets/icons/right_button.png" id="17_5v6r0"]
+[ext_resource type="Texture2D" uid="uid://du2m5bogtam0m" path="res://assets/icons/left_button.png" id="18_uyinl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_10c2w"]
 resource_name = "road"
@@ -76,6 +81,9 @@ public partial class TimerHud : CanvasLayer
     
 }
 "
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ftsea"]
+size = Vector2(50, 50)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5i0tg"]
 bg_color = Color(0.12437948, 0.26333922, 0.50509137, 1)
@@ -174,9 +182,13 @@ script = SubResource("CSharpScript_lfrn8")
 
 [node name="Control" type="Control" parent="TimerHUD" unique_id=606711958]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 640.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 576.0
+offset_bottom = 96.0
+grow_horizontal = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TimerHUD/Control" unique_id=812898336]
 layout_mode = 0
@@ -200,15 +212,23 @@ autostart = true
 
 [node name="Control" type="Control" parent="GameHUD" unique_id=1169689797]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -375.0
+offset_top = -202.0
+offset_right = -8.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GameHUD/Control" unique_id=935526858]
 layout_mode = 0
-offset_top = 515.0
-offset_right = 1152.0
-offset_bottom = 640.0
+offset_left = -1.0
+offset_top = 41.0
+offset_right = 378.0
+offset_bottom = 142.0
 alignment = 1
 
 [node name="HealthLayout" type="HBoxContainer" parent="GameHUD/Control/HBoxContainer" unique_id=1718234216]
@@ -229,6 +249,49 @@ theme_override_font_sizes/font_size = 73
 text = "x0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MobileControls" type="CanvasLayer" parent="." unique_id=75477925]
+layer = 10
+script = ExtResource("14_ftsea")
+
+[node name="Control" type="Control" parent="MobileControls" unique_id=999012789]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -364.0
+offset_right = 469.0
+offset_bottom = -34.0
+grow_vertical = 0
+
+[node name="UpButton" type="TouchScreenButton" parent="MobileControls/Control" unique_id=1566220774]
+position = Vector2(140, 18)
+scale = Vector2(2.597, 2.317)
+texture_normal = ExtResource("15_otnwt")
+shape = SubResource("RectangleShape2D_ftsea")
+action = "move_up"
+
+[node name="DownButton" type="TouchScreenButton" parent="MobileControls/Control" unique_id=49688739]
+position = Vector2(140, 168)
+scale = Vector2(2.597, 2.317)
+texture_normal = ExtResource("16_3xj4h")
+shape = SubResource("RectangleShape2D_ftsea")
+action = "move_down"
+
+[node name="RightButton" type="TouchScreenButton" parent="MobileControls/Control" unique_id=1393578367]
+position = Vector2(297, 94)
+scale = Vector2(2.597, 2.317)
+texture_normal = ExtResource("17_5v6r0")
+shape = SubResource("RectangleShape2D_ftsea")
+action = "move_right"
+
+[node name="LeftButton" type="TouchScreenButton" parent="MobileControls/Control" unique_id=1080037196]
+position = Vector2(-19.99997, 94)
+scale = Vector2(2.597, 2.317)
+texture_normal = ExtResource("18_uyinl")
+shape = SubResource("RectangleShape2D_ftsea")
+action = "move_left"
 
 [node name="GameOverHUD" type="CanvasLayer" parent="." unique_id=1385272621]
 visible = false
