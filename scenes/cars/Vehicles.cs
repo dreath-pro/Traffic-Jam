@@ -26,6 +26,7 @@ public partial class Vehicles : CharacterBody2D
             }
             else if (body is Cops cop)
             {
+                cop.takeDamage(1);
                 QueueFree();
             }
             else if (body is CargoTruck truck)

@@ -51,9 +51,10 @@ public partial class Cops : CharacterBody2D
             var collision = GetSlideCollision(i);
             var body = collision.GetCollider();
 
-            if (body is Vehicles)
+            if (body is Vehicles vehicle)
             {
                 takeDamage(1);
+                vehicle.QueueFree();
             }
             else if (body is CargoTruck)
             {
@@ -90,7 +91,7 @@ public partial class Cops : CharacterBody2D
         carSprite.Visible = true;
     }
 
-    private void takeDamage(int amount)
+    public void takeDamage(int amount)
     {
         if(!hasShield)
         {
