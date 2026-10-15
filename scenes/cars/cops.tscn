@@ -41,7 +41,7 @@ scale = Vector2(1.1710527, 1.1710527)
 sprite_frames = SubResource("SpriteFrames_ssr1l")
 animation = &"run_idle"
 autoplay = "run_idle"
-frame_progress = 0.4857235
+frame_progress = 0.17107588
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=459778629]
 position = Vector2(0.6578961, 20.92687)
@@ -76,3 +76,10 @@ theme_override_font_sizes/font_size = 22
 text = "x0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ShieldTimer" type="Timer" parent="." unique_id=1785760882]
+wait_time = 2.0
+
+[node name="BlinkTimer" type="Timer" parent="." unique_id=2093123423]
+wait_time = 0.049
+autostart = true

@@ -65,3 +65,10 @@ frame_progress = 0.61869645
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=99213374]
 position = Vector2(0.5769215, 21.730755)
 shape = SubResource("RectangleShape2D_sl3ph")
+
+[node name="ShieldTimer" type="Timer" parent="." unique_id=1769410584]
+wait_time = 2.0
+
+[node name="BlinkTimer" type="Timer" parent="." unique_id=2095890412]
+wait_time = 0.049
+autostart = true

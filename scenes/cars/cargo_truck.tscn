@@ -30,7 +30,7 @@ animations = [{
 size = Vector2(430.68146, 35.087723)
 
 [node name="CargoTruck" type="CharacterBody2D" unique_id=1697634268]
-scale = Vector2(2.2799997, 2.2799997)
+scale = Vector2(1.9200003, 1.9200003)
 collision_layer = 512
 collision_mask = 516
 script = ExtResource("1_ldmbb")

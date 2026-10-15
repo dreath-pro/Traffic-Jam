@@ -7,8 +7,21 @@ public partial class Cops : CharacterBody2D
     public static int totalEscaped = 0;
     private Player player;
 
+    private AnimatedSprite2D carSprite;
+    private Timer blinkTimer;
+    private Timer shieldTimer;
+
+    private bool hasShield = false;
+
     public override void _Ready()
     {
+        carSprite = GetNode<AnimatedSprite2D>("Car");
+        blinkTimer = GetNode<Timer>("BlinkTimer");
+        shieldTimer = GetNode<Timer>("ShieldTimer");
+
+        blinkTimer.Timeout += onBlinkTimerTimeout;
+        shieldTimer.Timeout += onShieldTimerTimeout;
+
         GetNode<Label>("%HealthLabel").Text = "x" + health.ToString();
 
         player = GetTree().GetFirstNodeInGroup("player") as Player;
@@ -25,7 +38,7 @@ public partial class Cops : CharacterBody2D
             return;
 
         float followSpeed = 1.0f;
-        float moveSpeed = 200.0f;
+        float moveSpeed = 100.0f;
 
         float targetY = player.GlobalPosition.Y;
         float newY = Mathf.Lerp(GlobalPosition.Y, targetY, followSpeed * (float)delta);
@@ -38,11 +51,14 @@ public partial class Cops : CharacterBody2D
             var collision = GetSlideCollision(i);
             var body = collision.GetCollider();
 
-            if (body is Vehicles vehicle)
+            if (body is Vehicles)
             {
                 takeDamage(1);
             }
-            else if (body is CargoTruck truck)
+            else if (body is CargoTruck)
+            {
+                takeDamage(1);
+            }else if (body is Player)
             {
                 takeDamage(1);
             }
@@ -60,17 +76,36 @@ public partial class Cops : CharacterBody2D
         }
     }
 
-    public void takeDamage(int amount)
+    private void onBlinkTimerTimeout()
     {
-        health -= amount;
-
-        if (health <= 0)
+        if (hasShield)
         {
-            health = 0;
-            totalEscaped++;
-            QueueFree();
+            carSprite.Visible = !carSprite.Visible;
         }
+    }
 
-        GetNode<Label>("%HealthLabel").Text = "x" + health.ToString();
+    private void onShieldTimerTimeout()
+    {
+        hasShield = false;
+        carSprite.Visible = true;
+    }
+
+    private void takeDamage(int amount)
+    {
+        if(!hasShield)
+        {
+            health -= amount;
+
+            hasShield = true;
+            shieldTimer.Start();
+            if (health <= 0)
+            {
+                health = 0;
+                totalEscaped++;
+                QueueFree();
+            }
+
+            GetNode<Label>("%HealthLabel").Text = "x" + health.ToString();
+        }
     }
 }

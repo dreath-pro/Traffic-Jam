@@ -3,7 +3,7 @@
     "Traffic Jam": {
       "commandName": "Project"
     },
-    "Profile 1": {
+    "Start in Godot": {
       "commandName": "Executable",
       "executablePath": "C:\\Users\\patrick James\\Documents\\Godot\\Godot_v4.7.2-stable_mono_win64\\Godot_v4.7.2-stable_mono_win64.exe",
       "commandLineArgs": "--path \"C:\\Users\\patrick James\\Documents\\GameProjects\\traffic-jam\"",
