@@ -27,3 +27,9 @@ obj/
 
 # .NET generated files
 mono_crash.*.json
+
+# Exported game builds
+/export/
+/build/
+*.pck
+*.exe
