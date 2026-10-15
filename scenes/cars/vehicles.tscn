@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bbxmlxx6u6016"]
 
 [ext_resource type="Script" uid="uid://pj6kiijdyvjl" path="res://scenes/cars/Vehicles.cs" id="1_oaoh4"]
+[ext_resource type="Texture2D" uid="uid://cre6ivy658b8" path="res://assets/icons/shadow.png" id="2_42w2s"]
 [ext_resource type="Texture2D" uid="uid://ekwwd14a3h4w" path="res://assets/cars/npc/character/pig1.png" id="2_jh0lq"]
 [ext_resource type="Texture2D" uid="uid://b7wtrp8ppifdf" path="res://assets/cars/npc/character/golden_lab1.png" id="2_ryiav"]
 [ext_resource type="Texture2D" uid="uid://c0pet0g1kdyg" path="res://assets/cars/npc/car/blue_car1.png" id="2_w7gkp"]
@@ -171,6 +172,11 @@ collision_mask = 519
 script = ExtResource("1_oaoh4")
 carAnimationNames = Array[String](["blue", "green", "orange", "red", "violet", "yellow"])
 characterAnimationNames = Array[String](["golden_lab", "human", "pig"])
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=1759100503]
+position = Vector2(0.20161211, 21.814516)
+scale = Vector2(1.1038318, 0.9989925)
+texture = ExtResource("2_42w2s")
 
 [node name="Character" type="AnimatedSprite2D" parent="." unique_id=2050291940]
 sprite_frames = SubResource("SpriteFrames_w7gkp")

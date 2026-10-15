@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://v3jn2o0c3e1b" path="res://assets/cars/cop/police_car2.png" id="3_qyiv0"]
 [ext_resource type="Texture2D" uid="uid://3tim51qbkxch" path="res://assets/cars/cop/police_car3.png" id="4_uxc8t"]
 [ext_resource type="Texture2D" uid="uid://beexmghu2wl6a" path="res://assets/cars/cop/police_car4.png" id="5_tcpgq"]
+[ext_resource type="Texture2D" uid="uid://cre6ivy658b8" path="res://assets/icons/shadow.png" id="6_qyiv0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ssr1l"]
 animations = [{
@@ -36,12 +37,18 @@ collision_layer = 256
 collision_mask = 775
 script = ExtResource("1_aop4u")
 
+[node name="Shadow" type="Sprite2D" parent="." unique_id=306813846]
+position = Vector2(0.9191181, 21.323536)
+scale = Vector2(1.2913609, 1.0661768)
+texture = ExtResource("6_qyiv0")
+
 [node name="Car" type="AnimatedSprite2D" parent="." unique_id=900567035]
 scale = Vector2(1.1710527, 1.1710527)
 sprite_frames = SubResource("SpriteFrames_ssr1l")
 animation = &"run_idle"
 autoplay = "run_idle"
-frame_progress = 0.17107588
+frame = 2
+frame_progress = 0.042606924
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=459778629]
 position = Vector2(0.6578961, 20.92687)

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://duy6kbsqidlu7" path="res://scenes/cars/Player.cs" id="1_j51pt"]
 [ext_resource type="Texture2D" uid="uid://cjmw2lopyr75m" path="res://assets/cars/player/character/player_character1.png" id="2_r0dsj"]
+[ext_resource type="Texture2D" uid="uid://cre6ivy658b8" path="res://assets/icons/shadow.png" id="2_r1jvk"]
 [ext_resource type="Texture2D" uid="uid://cfrtkbveyj107" path="res://assets/cars/player/character/player_character2.png" id="3_tv1jx"]
 [ext_resource type="Texture2D" uid="uid://dwremcm20qp8g" path="res://assets/cars/player/character/player_character3.png" id="4_cohvq"]
 [ext_resource type="Texture2D" uid="uid://rgqx37wqslty" path="res://assets/cars/player/car/player_car1.png" id="5_ss0ko"]
@@ -49,6 +50,11 @@ size = Vector2(71.153786, 14.230758)
 scale = Vector2(2.6000023, 2.6000023)
 collision_mask = 782
 script = ExtResource("1_j51pt")
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=1232672142]
+position = Vector2(0.19230916, 21.730753)
+scale = Vector2(1.1201915, 1.0432684)
+texture = ExtResource("2_r1jvk")
 
 [node name="Character" type="AnimatedSprite2D" parent="." unique_id=1416956595]
 sprite_frames = SubResource("SpriteFrames_ssr1l")
