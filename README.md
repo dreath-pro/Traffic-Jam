@@ -19,7 +19,7 @@ A 2D top-down vehicle-dodging arcade game built with **Godot Engine**.
 * **Top-Down Player Movement:** Smooth movement using Godot's `CharacterBody2D`.
 * **Vehicle AI:** Dodge unpredictable NPC vehicles that change direction and move across the road.
 * **Truck AI:** Trucks continue moving backward and cannot be damaged by the player and other vehicles.
-* **Police Mini-Boss:** A pursuing police vehicle tracks the player's vertical position while continuing forward. Outmaneuver it by moving above or below its path and slipping past it.
+* **Police Mini-Boss:** A pursuing police vehicle that has 50/50 chance of spawning every 30 seconds and tracks the player's vertical position while continuing forward. Outmaneuver it by moving above or below its path and slipping past it.
 * **Health System:** Collisions with other vehicles reduce the player's health.
 
 ---
@@ -29,12 +29,13 @@ A 2D top-down vehicle-dodging arcade game built with **Godot Engine**.
 * **Text Editor** [Visual Studio](https://visualstudio.microsoft.com/)
 * **Language:** C#
 * **Art and Tools:** Custom 2D Pixel Sprites using [LibreSprite 1.3](https://libresprite.github.io/#!/)
+* **Emulator:** [Android Studio Rabbit 1|2026.2.1](https://developer.android.com/studio)
 
 ---
 
 ## 🚧 Development Status
 
-**Status:** Early Development · **Platform:** Windows · **Version:** v0.2.0
+**Status:** Early Development · **Platforms:** Windows, Android · **Version:** v0.2.1
 
 Gameplay mechanics and features are still being developed, so you may encounter bugs, balancing issues, or unfinished content.
 
@@ -51,12 +52,19 @@ You can report bugs, share suggestions, or request features through the [GitHub 
 ---
 
 ## 🕹️ Controls
+
+For Desktop
 | Action | Key / Input |
 | :--- | :--- |
 | **Move Up** | `W` |
 | **Move Down** | `S` |
 | **Move Left** | `A` |
 | **Move Right** | `D` |
+
+For Android
+| Action | Key / Input |
+| :--- | :--- |
+| **Move** | `On-screen visual joystick.` |
 
 ---
 
@@ -83,6 +91,13 @@ More features may be added as development progresses.
 
 **Note:** Keep all files included in the extracted game folder together. Do not move the executable by itself, as the game may depend on other files in the export.
 
+### Android
+
+1. Download the Android APK from the [Releases page](https://github.com/dreath-pro/Traffic-Jam/releases).
+2. Open the downloaded APK on your Android device.
+3. If prompted, allow installation from that source in your Android settings.
+4. Tap Install, then launch Traffic Jam.
+
 ---
 
 ## 🙌 Credits
@@ -92,6 +107,7 @@ More features may be added as development progresses.
 - **Text Editor:** Microsoft Visual Studio
 - **Programming Language:** C#
 - **Pixel Art:** Original artwork created using LibreSprite
+- **Emulator:** Android Studio
 
 Third-party libraries, tools, and assets, if any, remain subject to their respective licenses.
 
