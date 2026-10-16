@@ -146,7 +146,7 @@ script = ExtResource("4_bdhmt")
 CopScene = ExtResource("5_87uf6")
 
 [node name="SpawnTimer" type="Timer" parent="Camera2D/FrontSpawn" unique_id=1292056641]
-wait_time = 30.0
+wait_time = 0.747
 autostart = true
 
 [node name="SpawnPoint1" type="Marker2D" parent="Camera2D/FrontSpawn" unique_id=1308807563]
@@ -166,7 +166,7 @@ VehicleScene = ExtResource("3_0sr1o")
 TruckScene = ExtResource("8_2a8rs")
 
 [node name="SpawnTimer" type="Timer" parent="Camera2D/BackSpawn" unique_id=1974810360]
-wait_time = 1.5
+wait_time = 0.747
 autostart = true
 
 [node name="SpawnPoint1" type="Marker2D" parent="Camera2D/BackSpawn" unique_id=1852238697]

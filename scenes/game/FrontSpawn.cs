@@ -19,7 +19,16 @@ public partial class FrontSpawn : Node2D
             GetNode<Marker2D>("SpawnPoint3")
         };
 
-        GetNode<Timer>("SpawnTimer").Timeout += SpawnCop;
+        GetNode<Timer>("SpawnTimer").Timeout += SpawnAll;
+    }
+
+    private void SpawnAll()
+    {
+        rngSelected = rng.RandiRange(0, 50);
+        if (rngSelected == 0)
+        {
+            SpawnCop();
+        }
     }
 
     private void SpawnCop()
@@ -27,17 +36,10 @@ public partial class FrontSpawn : Node2D
         if (CopScene == null)
             return;
 
-        //0 - spawn
-        //1 - do not spawn
-        rngSelected = rng.RandiRange(0, 1);
+        Marker2D point = spawnPoints[rng.RandiRange(0, spawnPoints.Length - 1)];
 
-        if (rngSelected == 0)
-        {
-            Marker2D point = spawnPoints[rng.RandiRange(0, spawnPoints.Length - 1)];
-
-            Cops cop = CopScene.Instantiate<Cops>();
-            GetNode<Node2D>("/root/Game/Actors").AddChild(cop);
-            cop.GlobalPosition = point.GlobalPosition;
-        }
+        Cops cop = CopScene.Instantiate<Cops>();
+        GetNode<Node2D>("/root/Game/Actors").AddChild(cop);
+        cop.GlobalPosition = point.GlobalPosition;
     }
 }
