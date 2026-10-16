@@ -36,7 +36,7 @@ public partial class FrontSpawn : Node2D
             Marker2D point = spawnPoints[rng.RandiRange(0, spawnPoints.Length - 1)];
 
             Cops cop = CopScene.Instantiate<Cops>();
-            GetNode<Node2D>("../Actors").AddChild(cop);
+            GetNode<Node2D>("/root/Game/Actors").AddChild(cop);
             cop.GlobalPosition = point.GlobalPosition;
         }
     }

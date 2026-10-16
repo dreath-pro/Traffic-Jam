@@ -14,10 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://brbs1in24a6gw" path="res://assets/map/road_small_line.png" id="7_uyinl"]
 [ext_resource type="PackedScene" uid="uid://mjwkvght0c0h" path="res://scenes/cars/cargo_truck.tscn" id="8_2a8rs"]
 [ext_resource type="Script" uid="uid://fxb6vulmdmbw" path="res://scenes/game/MobileControls.cs" id="14_ftsea"]
-[ext_resource type="Texture2D" uid="uid://dbll3s8yx4k81" path="res://assets/icons/up_button.png" id="15_otnwt"]
-[ext_resource type="Texture2D" uid="uid://balkhfv7ejnx2" path="res://assets/icons/down_button.png" id="16_3xj4h"]
-[ext_resource type="Texture2D" uid="uid://d4l6liimkpbvs" path="res://assets/icons/right_button.png" id="17_5v6r0"]
-[ext_resource type="Texture2D" uid="uid://du2m5bogtam0m" path="res://assets/icons/left_button.png" id="18_uyinl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_10c2w"]
 resource_name = "road"
@@ -82,9 +78,6 @@ public partial class TimerHud : CanvasLayer
 }
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ftsea"]
-size = Vector2(50, 50)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5i0tg"]
 bg_color = Color(0.12437948, 0.26333922, 0.50509137, 1)
 
@@ -142,39 +135,47 @@ shape = SubResource("RectangleShape2D_ssr1l")
 position = Vector2(1157, 320)
 shape = SubResource("RectangleShape2D_5ft2r")
 
-[node name="FrontSpawn" type="Node2D" parent="." unique_id=261464997]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=770881285]
+position = Vector2(575, 316)
+scale = Vector2(1.0218184, 0.99697065)
+
+[node name="FrontSpawn" type="Node2D" parent="Camera2D" unique_id=261464997]
+position = Vector2(-562.7223, -316.96017)
+scale = Vector2(0.9786474, 1.0030385)
 script = ExtResource("4_bdhmt")
 CopScene = ExtResource("5_87uf6")
 
-[node name="SpawnTimer" type="Timer" parent="FrontSpawn" unique_id=1292056641]
+[node name="SpawnTimer" type="Timer" parent="Camera2D/FrontSpawn" unique_id=1292056641]
 wait_time = 30.0
 autostart = true
 
-[node name="SpawnPoint1" type="Marker2D" parent="FrontSpawn" unique_id=1308807563]
-position = Vector2(-168, 87)
+[node name="SpawnPoint1" type="Marker2D" parent="Camera2D/FrontSpawn" unique_id=1308807563]
+position = Vector2(-389.00006, 87)
 
-[node name="SpawnPoint2" type="Marker2D" parent="FrontSpawn" unique_id=258453684]
-position = Vector2(-168, 321)
+[node name="SpawnPoint2" type="Marker2D" parent="Camera2D/FrontSpawn" unique_id=258453684]
+position = Vector2(-389.00006, 321)
 
-[node name="SpawnPoint3" type="Marker2D" parent="FrontSpawn" unique_id=2004002207]
-position = Vector2(-168, 551)
+[node name="SpawnPoint3" type="Marker2D" parent="Camera2D/FrontSpawn" unique_id=2004002207]
+position = Vector2(-389.00006, 551)
 
-[node name="BackSpawn" type="Node2D" parent="." unique_id=1803770269]
+[node name="BackSpawn" type="Node2D" parent="Camera2D" unique_id=1803770269]
+position = Vector2(-562.7223, -316.96017)
+scale = Vector2(0.9786474, 1.0030385)
 script = ExtResource("4_kelw5")
 VehicleScene = ExtResource("3_0sr1o")
 TruckScene = ExtResource("8_2a8rs")
 
-[node name="SpawnTimer" type="Timer" parent="BackSpawn" unique_id=1974810360]
+[node name="SpawnTimer" type="Timer" parent="Camera2D/BackSpawn" unique_id=1974810360]
 wait_time = 1.5
 autostart = true
 
-[node name="SpawnPoint1" type="Marker2D" parent="BackSpawn" unique_id=1852238697]
+[node name="SpawnPoint1" type="Marker2D" parent="Camera2D/BackSpawn" unique_id=1852238697]
 position = Vector2(1694, 87)
 
-[node name="SpawnPoint2" type="Marker2D" parent="BackSpawn" unique_id=1532745184]
+[node name="SpawnPoint2" type="Marker2D" parent="Camera2D/BackSpawn" unique_id=1532745184]
 position = Vector2(1694, 321)
 
-[node name="SpawnPoint3" type="Marker2D" parent="BackSpawn" unique_id=1215501511]
+[node name="SpawnPoint3" type="Marker2D" parent="Camera2D/BackSpawn" unique_id=1215501511]
 position = Vector2(1694, 551)
 
 [node name="TimerHUD" type="CanvasLayer" parent="." unique_id=42063304]
@@ -251,7 +252,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MobileControls" type="CanvasLayer" parent="." unique_id=75477925]
-layer = 10
+layer = 20
 script = ExtResource("14_ftsea")
 
 [node name="Control" type="Control" parent="MobileControls" unique_id=999012789]
@@ -265,49 +266,51 @@ offset_right = 469.0
 offset_bottom = -34.0
 grow_vertical = 0
 
-[node name="UpButton" type="TouchScreenButton" parent="MobileControls/Control" unique_id=1566220774]
-position = Vector2(140, 18)
-scale = Vector2(2.597, 2.317)
-texture_normal = ExtResource("15_otnwt")
-shape = SubResource("RectangleShape2D_ftsea")
-action = "move_up"
-
-[node name="DownButton" type="TouchScreenButton" parent="MobileControls/Control" unique_id=49688739]
-position = Vector2(140, 168)
-scale = Vector2(2.597, 2.317)
-texture_normal = ExtResource("16_3xj4h")
-shape = SubResource("RectangleShape2D_ftsea")
-action = "move_down"
-
-[node name="RightButton" type="TouchScreenButton" parent="MobileControls/Control" unique_id=1393578367]
-position = Vector2(297, 94)
-scale = Vector2(2.597, 2.317)
-texture_normal = ExtResource("17_5v6r0")
-shape = SubResource("RectangleShape2D_ftsea")
-action = "move_right"
-
-[node name="LeftButton" type="TouchScreenButton" parent="MobileControls/Control" unique_id=1080037196]
-position = Vector2(-19.99997, 94)
-scale = Vector2(2.597, 2.317)
-texture_normal = ExtResource("18_uyinl")
-shape = SubResource("RectangleShape2D_ftsea")
-action = "move_left"
+[node name="VirtualJoystick" type="VirtualJoystick" parent="MobileControls/Control" unique_id=617271520]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 51.0
+offset_right = 175.0
+offset_bottom = 91.0
+scale = Vector2(5.2799997, 5.2799997)
+joystick_mode = 1
+joystick_size = 30.0
+tip_size = 30.0
+action_left = &"move_left"
+action_right = &"move_right"
+action_up = &"move_up"
+action_down = &"move_down"
 
 [node name="GameOverHUD" type="CanvasLayer" parent="." unique_id=1385272621]
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="GameOverHUD" unique_id=497659162]
-offset_left = -19.0
-offset_top = -21.0
-offset_right = 1175.0
-offset_bottom = 671.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -597.0
+offset_top = -346.0
+offset_right = 597.0
+offset_bottom = 346.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 0.7019608)
 
 [node name="Control" type="Control" parent="GameOverHUD" unique_id=542946089]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 640.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -320.0
+offset_right = 576.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="GameOverHUD/Control" unique_id=1516686558]
 layout_mode = 0

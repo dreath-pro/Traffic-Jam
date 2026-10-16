@@ -39,7 +39,7 @@ public partial class Vehicles : CharacterBody2D
             }
         }
 
-        if (GlobalPosition.X < -100)
+        if (GlobalPosition.X < -389)
             QueueFree();
     }
 

@@ -65,9 +65,9 @@ public partial class Cops : CharacterBody2D
             }
         }
 
-        if (GlobalPosition.X > 1290)
+        if (GlobalPosition.X > 2000)
         {
-            if (GlobalPosition.X < 2000)
+            if (GlobalPosition.X < 2800)
             {
                 totalEscaped++;
                 QueueFree();

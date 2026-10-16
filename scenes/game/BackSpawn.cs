@@ -41,7 +41,7 @@ public partial class BackSpawn : Node2D
 
         Node2D truck = TruckScene.Instantiate<Node2D>();
         //GetTree().CurrentScene.AddChild(truck);
-        GetNode<Node2D>("../Actors").AddChild(truck);
+        GetNode<Node2D>("/root/Game/Actors").AddChild(truck);
 
         Marker2D point = spawnPoints[rng.RandiRange(0, spawnPoints.Length - 1)];
         truck.GlobalPosition = point.GlobalPosition;
@@ -56,7 +56,7 @@ public partial class BackSpawn : Node2D
 
         Vehicles vehicle = VehicleScene.Instantiate<Vehicles>();
         //GetTree().CurrentScene.AddChild(vehicle);
-        GetNode<Node2D>("../Actors").AddChild(vehicle);
+        GetNode<Node2D>("/root/Game/Actors").AddChild(vehicle);
         vehicle.GlobalPosition = point.GlobalPosition;
     }
 }
