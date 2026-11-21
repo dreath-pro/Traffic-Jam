@@ -170,6 +170,7 @@ scale = Vector2(2.4799976, 2.4799976)
 collision_layer = 2
 collision_mask = 519
 script = ExtResource("1_oaoh4")
+entityName = "Vehicle"
 carAnimationNames = Array[String](["blue", "green", "orange", "red", "violet", "yellow"])
 characterAnimationNames = Array[String](["golden_lab", "human", "pig"])
 

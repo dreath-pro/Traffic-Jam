@@ -8,6 +8,7 @@ public partial class Game : Node2D
     private Player player;
     private Timer timeCount;
     private String timeText;
+    private Button restartButton;
 
     public override void _Process(double delta)
     {
@@ -23,7 +24,10 @@ public partial class Game : Node2D
         GetNode<Label>("%HealthLabel").Text = "x" + player.health;
 
         player.GameOver += OnGameOver;
-        GetNode<Button>("%RestartButton").Pressed += OnRestartPressed;
+
+        restartButton = GetNode<Button>("%RestartButton");
+        restartButton.Pressed += OnRestartPressed;
+         
         GetNode<CanvasLayer>("GameOverHUD").ProcessMode = Node.ProcessModeEnum.WhenPaused;
     }
 
