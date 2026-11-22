@@ -41,9 +41,12 @@
 [ext_resource type="Texture2D" uid="uid://b1m8ncgvdbi6x" path="res://assets/cars/npc/car/violet_car1.png" id="17_dphtc"]
 [ext_resource type="Texture2D" uid="uid://cio7gim5j51j8" path="res://assets/cars/npc/car/brown1.png" id="18_fhlvo"]
 [ext_resource type="Texture2D" uid="uid://bgwsyny0qqp7w" path="res://assets/cars/npc/car/violet_car2.png" id="18_m7g84"]
+[ext_resource type="Texture2D" uid="uid://dg7shxte2dxnx" path="res://assets/cars/npc/character/luxury_girl1.png" id="18_wrn5m"]
 [ext_resource type="Texture2D" uid="uid://6any2r4e2h3a" path="res://assets/cars/npc/car/brown2.png" id="19_0xvt0"]
 [ext_resource type="Texture2D" uid="uid://b7dym7n1agq5a" path="res://assets/cars/npc/car/violet_car3.png" id="19_bkoc6"]
+[ext_resource type="Texture2D" uid="uid://bko2kwx7tecul" path="res://assets/cars/npc/character/luxury_girl2.png" id="19_rble4"]
 [ext_resource type="Texture2D" uid="uid://0u2ebx4oe40l" path="res://assets/cars/npc/car/brown3.png" id="20_fk416"]
+[ext_resource type="Texture2D" uid="uid://wrckccpic4jp" path="res://assets/cars/npc/character/luxury_girl3.png" id="20_hjwbl"]
 [ext_resource type="Texture2D" uid="uid://ducar4s0773g7" path="res://assets/cars/npc/car/yellow_car1.png" id="20_ryiav"]
 [ext_resource type="Texture2D" uid="uid://dbabh0f5ci8qb" path="res://assets/cars/npc/car/yellow_car2.png" id="21_42w2s"]
 [ext_resource type="Texture2D" uid="uid://cpafn6f7rav5t" path="res://assets/cars/npc/car/yellow_car3.png" id="22_eua8k"]
@@ -53,6 +56,9 @@
 [ext_resource type="Texture2D" uid="uid://bsbgvwan8ctc4" path="res://assets/cars/npc/car/white_car1.png" id="30_nn00v"]
 [ext_resource type="Texture2D" uid="uid://plu7mkxle3k3" path="res://assets/cars/npc/car/white_car2.png" id="31_bxdhn"]
 [ext_resource type="Texture2D" uid="uid://cmlx6kfx8c4re" path="res://assets/cars/npc/car/white_car3.png" id="32_mc0wu"]
+[ext_resource type="Texture2D" uid="uid://c48k4uldr3crj" path="res://assets/cars/npc/car/gray_car1.png" id="36_5niw4"]
+[ext_resource type="Texture2D" uid="uid://dnoky6i1p6vfw" path="res://assets/cars/npc/car/gray_car2.png" id="37_6pl6s"]
+[ext_resource type="Texture2D" uid="uid://bxyn5gnf6bwm3" path="res://assets/cars/npc/car/gray_car3.png" id="38_wfh1a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w7gkp"]
 animations = [{
@@ -128,6 +134,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 0.3,
+"texture": ExtResource("18_wrn5m")
+}, {
+"duration": 0.3,
+"texture": ExtResource("19_rble4")
+}, {
+"duration": 0.3,
+"texture": ExtResource("20_hjwbl")
+}],
+"loop": 1,
+"name": &"luxury_girl",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
 "texture": ExtResource("2_jh0lq")
 }, {
 "duration": 0.3,
@@ -197,6 +217,20 @@ animations = [{
 }],
 "loop": 1,
 "name": &"brown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("36_5niw4")
+}, {
+"duration": 0.3,
+"texture": ExtResource("37_6pl6s")
+}, {
+"duration": 0.3,
+"texture": ExtResource("38_wfh1a")
+}],
+"loop": 1,
+"name": &"gray",
 "speed": 5.0
 }, {
 "frames": [{
@@ -307,8 +341,8 @@ collision_layer = 2
 collision_mask = 519
 script = ExtResource("1_oaoh4")
 entityName = "Vehicle"
-carAnimationNames = Array[String](["blue", "green", "orange", "red", "violet", "yellow", "black", "white", "brown", "pink"])
-characterAnimationNames = Array[String](["golden_lab", "human", "pig", "chick", "summer_boy", "chicken", "cow"])
+carAnimationNames = Array[String](["blue", "green", "orange", "red", "violet", "yellow", "black", "white", "brown", "pink", "gray"])
+characterAnimationNames = Array[String](["golden_lab", "human", "pig", "chick", "summer_boy", "chicken", "cow", "luxury_girl"])
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=1759100503]
 position = Vector2(0.20161211, 21.814516)
@@ -317,12 +351,14 @@ texture = ExtResource("2_42w2s")
 
 [node name="Character" type="AnimatedSprite2D" parent="." unique_id=2050291940]
 sprite_frames = SubResource("SpriteFrames_w7gkp")
-animation = &"cow"
-frame_progress = 0.25158328
+animation = &"luxury_girl"
+frame_progress = 0.510004
 
 [node name="Car" type="AnimatedSprite2D" parent="." unique_id=1342503619]
 sprite_frames = SubResource("SpriteFrames_suqk4")
-animation = &"blue"
+animation = &"gray"
+frame = 2
+frame_progress = 0.73427755
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2030877195]
 position = Vector2(0.46296516, 21.774214)
