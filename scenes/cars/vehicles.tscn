@@ -7,16 +7,25 @@
 [ext_resource type="Texture2D" uid="uid://c0pet0g1kdyg" path="res://assets/cars/npc/car/blue_car1.png" id="2_w7gkp"]
 [ext_resource type="Texture2D" uid="uid://4gu87rgovcdg" path="res://assets/cars/npc/character/golden_lab2.png" id="3_42w2s"]
 [ext_resource type="Texture2D" uid="uid://d136ubfmnl477" path="res://assets/cars/npc/car/blue_car2.png" id="3_d78fs"]
+[ext_resource type="Texture2D" uid="uid://oytxbli1fkhs" path="res://assets/cars/npc/character/chick1.png" id="3_opdv5"]
 [ext_resource type="Texture2D" uid="uid://difpwbdxkvjwq" path="res://assets/cars/npc/character/pig2.png" id="3_p4eve"]
 [ext_resource type="Texture2D" uid="uid://blwe7oyjswerf" path="res://assets/cars/npc/car/blue_car3.png" id="4_a1udx"]
 [ext_resource type="Texture2D" uid="uid://b6mhwm5idn3gl" path="res://assets/cars/npc/character/pig3.png" id="4_burxd"]
 [ext_resource type="Texture2D" uid="uid://cpwl3efsnhso7" path="res://assets/cars/npc/character/golden_lab3.png" id="4_eua8k"]
+[ext_resource type="Texture2D" uid="uid://ilwgum6yu8cw" path="res://assets/cars/npc/character/chick2.png" id="4_uxoc6"]
 [ext_resource type="Texture2D" uid="uid://bwb5u4sgqimb3" path="res://assets/cars/npc/character/human1.png" id="5_iyxdf"]
+[ext_resource type="Texture2D" uid="uid://ktqm76ncbior" path="res://assets/cars/npc/character/chick3.png" id="5_pr6q7"]
+[ext_resource type="Texture2D" uid="uid://vmfxo44aefea" path="res://assets/cars/npc/character/chicken1.png" id="6_1bugu"]
 [ext_resource type="Texture2D" uid="uid://bxmcurogw82d0" path="res://assets/cars/npc/character/human2.png" id="6_slo2x"]
 [ext_resource type="Texture2D" uid="uid://bi2qa8t1sg4pa" path="res://assets/cars/npc/character/human3.png" id="7_h5y23"]
+[ext_resource type="Texture2D" uid="uid://cfqi4uor8236k" path="res://assets/cars/npc/character/chicken2.png" id="7_okmoo"]
+[ext_resource type="Texture2D" uid="uid://5252r8ay5560" path="res://assets/cars/npc/character/chicken3.png" id="8_csek7"]
 [ext_resource type="Texture2D" uid="uid://dcqnsbqehsudl" path="res://assets/cars/npc/car/green_car1.png" id="8_ke8hb"]
+[ext_resource type="Texture2D" uid="uid://drob1psmyedhy" path="res://assets/cars/npc/character/cow1.png" id="9_ij5q6"]
 [ext_resource type="Texture2D" uid="uid://qfgno8kl0loj" path="res://assets/cars/npc/car/green_car2.png" id="9_v765t"]
 [ext_resource type="Texture2D" uid="uid://c2isfw2mus4n7" path="res://assets/cars/npc/car/green_car3.png" id="10_3vakx"]
+[ext_resource type="Texture2D" uid="uid://dyxqyfctgptd6" path="res://assets/cars/npc/character/cow2.png" id="10_7q2lo"]
+[ext_resource type="Texture2D" uid="uid://xpsul01kwtkx" path="res://assets/cars/npc/character/cow3.png" id="11_q8lhh"]
 [ext_resource type="Texture2D" uid="uid://crbaxrbd463fu" path="res://assets/cars/npc/car/orange_car1.png" id="11_sfg0t"]
 [ext_resource type="Texture2D" uid="uid://r88b7f7ppfkg" path="res://assets/cars/npc/car/orange_car2.png" id="12_obg8h"]
 [ext_resource type="Texture2D" uid="uid://djdmru8mytof0" path="res://assets/cars/npc/car/black_car1.png" id="12_slo2x"]
@@ -24,8 +33,11 @@
 [ext_resource type="Texture2D" uid="uid://cixlwh8bdf00b" path="res://assets/cars/npc/car/black_car2.png" id="13_h5y23"]
 [ext_resource type="Texture2D" uid="uid://ph330uhsvcxq" path="res://assets/cars/npc/car/black_car3.png" id="14_4bijn"]
 [ext_resource type="Texture2D" uid="uid://ielu1pg60a1d" path="res://assets/cars/npc/car/red_car1.png" id="14_g7ej1"]
+[ext_resource type="Texture2D" uid="uid://51da1bd3xk0" path="res://assets/cars/npc/character/summer_boy1.png" id="15_vbjgx"]
 [ext_resource type="Texture2D" uid="uid://c32p36yu8qwl5" path="res://assets/cars/npc/car/red_car2.png" id="15_yujs2"]
 [ext_resource type="Texture2D" uid="uid://d4jhvs1digo70" path="res://assets/cars/npc/car/red_car3.png" id="16_0rx0n"]
+[ext_resource type="Texture2D" uid="uid://blsp35o5iecbp" path="res://assets/cars/npc/character/summer_boy2.png" id="16_aqc1y"]
+[ext_resource type="Texture2D" uid="uid://cbavlbx0vb3tq" path="res://assets/cars/npc/character/summer_boy3.png" id="17_1hohf"]
 [ext_resource type="Texture2D" uid="uid://b1m8ncgvdbi6x" path="res://assets/cars/npc/car/violet_car1.png" id="17_dphtc"]
 [ext_resource type="Texture2D" uid="uid://cio7gim5j51j8" path="res://assets/cars/npc/car/brown1.png" id="18_fhlvo"]
 [ext_resource type="Texture2D" uid="uid://bgwsyny0qqp7w" path="res://assets/cars/npc/car/violet_car2.png" id="18_m7g84"]
@@ -44,6 +56,48 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w7gkp"]
 animations = [{
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("3_opdv5")
+}, {
+"duration": 0.3,
+"texture": ExtResource("4_uxoc6")
+}, {
+"duration": 0.3,
+"texture": ExtResource("5_pr6q7")
+}],
+"loop": 1,
+"name": &"chick",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("6_1bugu")
+}, {
+"duration": 0.3,
+"texture": ExtResource("7_okmoo")
+}, {
+"duration": 0.3,
+"texture": ExtResource("8_csek7")
+}],
+"loop": 1,
+"name": &"chicken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("9_ij5q6")
+}, {
+"duration": 0.3,
+"texture": ExtResource("10_7q2lo")
+}, {
+"duration": 0.3,
+"texture": ExtResource("11_q8lhh")
+}],
+"loop": 1,
+"name": &"cow",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 0.3,
 "texture": ExtResource("2_ryiav")
@@ -84,6 +138,20 @@ animations = [{
 }],
 "loop": 1,
 "name": &"pig",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("15_vbjgx")
+}, {
+"duration": 0.3,
+"texture": ExtResource("16_aqc1y")
+}, {
+"duration": 0.3,
+"texture": ExtResource("17_1hohf")
+}],
+"loop": 1,
+"name": &"summer_boy",
 "speed": 5.0
 }]
 
@@ -240,7 +308,7 @@ collision_mask = 519
 script = ExtResource("1_oaoh4")
 entityName = "Vehicle"
 carAnimationNames = Array[String](["blue", "green", "orange", "red", "violet", "yellow", "black", "white", "brown", "pink"])
-characterAnimationNames = Array[String](["golden_lab", "human", "pig"])
+characterAnimationNames = Array[String](["golden_lab", "human", "pig", "chick", "summer_boy", "chicken", "cow"])
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=1759100503]
 position = Vector2(0.20161211, 21.814516)
@@ -249,12 +317,12 @@ texture = ExtResource("2_42w2s")
 
 [node name="Character" type="AnimatedSprite2D" parent="." unique_id=2050291940]
 sprite_frames = SubResource("SpriteFrames_w7gkp")
-animation = &"golden_lab"
-frame_progress = 0.109151505
+animation = &"cow"
+frame_progress = 0.25158328
 
 [node name="Car" type="AnimatedSprite2D" parent="." unique_id=1342503619]
 sprite_frames = SubResource("SpriteFrames_suqk4")
-animation = &"pink"
+animation = &"blue"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2030877195]
 position = Vector2(0.46296516, 21.774214)
