@@ -8,7 +8,7 @@ public partial class Game : Node2D
     private Player player;
     private Timer timeCount;
     private String timeText;
-    private Button restartButton;
+    private Button restartButton, menuButton;
 
     public override void _Process(double delta)
     {
@@ -27,6 +27,9 @@ public partial class Game : Node2D
 
         restartButton = GetNode<Button>("%RestartButton");
         restartButton.Pressed += OnRestartPressed;
+
+        menuButton = GetNode<Button>("%MenuButton");
+        menuButton.Pressed += OnMenuPressed;
          
         GetNode<CanvasLayer>("GameOverHUD").ProcessMode = Node.ProcessModeEnum.WhenPaused;
     }
@@ -45,6 +48,12 @@ public partial class Game : Node2D
         Cops.totalEscaped = 0;
         GetTree().Paused = false;
         GetTree().ReloadCurrentScene();
+    }
+
+    private void OnMenuPressed()
+    {
+        GetTree().Paused = false;
+        GetTree().ChangeSceneToFile("res://scenes/layout/homescreen.tscn");
     }
 
     private void DisplayTime()
