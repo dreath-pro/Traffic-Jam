@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bgk3a8m86ycbm"]
+
+[ext_resource type="Texture2D" uid="uid://ll5ufmelmala" path="res://assets/icons/title_logo.png" id="1_eoykb"]
+[ext_resource type="Script" uid="uid://cvyx2bpul24uq" path="res://scenes/layout/Homescreen.cs" id="1_smvyv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eoykb"]
+bg_color = Color(0.21822599, 0.10384589, 0.35521415, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smvyv"]
+bg_color = Color(0.16524363, 0.07059687, 0.2755024, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64erp"]
+bg_color = Color(0.2768746, 0.13552815, 0.44224364, 1)
+
+[node name="Homescreen" type="Control" unique_id=1057353837]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.5
+offset_top = -324.5
+offset_right = 577.5
+offset_bottom = 324.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_smvyv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=318028394]
+layout_mode = 0
+offset_right = 1154.5
+offset_bottom = 653.5
+color = Color(0.2240378, 0.291413, 0.5393063, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=323767852]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -321.0
+offset_right = 350.0
+offset_bottom = 321.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=259982542]
+texture_filter = 1
+custom_minimum_size = Vector2(700, 140)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_eoykb")
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=715287266]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_colors/font_color = Color(1, 0.5413382, 0.9331625, 1)
+theme_override_colors/font_pressed_color = Color(0.9999996, 0.14478478, 0.9218559, 1)
+theme_override_colors/font_hover_color = Color(1, 0.65801316, 0.9436563, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_eoykb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_smvyv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_64erp")
+text = "Play"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=294390149]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.5413382, 0.9331625, 1)
+theme_override_colors/font_pressed_color = Color(0.9999996, 0.14478478, 0.9218559, 1)
+theme_override_colors/font_hover_color = Color(1, 0.65801316, 0.9436563, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_eoykb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_smvyv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_64erp")
+text = "Exit"
