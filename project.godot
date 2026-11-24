@@ -13,7 +13,7 @@ config_version=5
 config/name="Traffic Jam"
 run/main_scene="uid://bgk3a8m86ycbm"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
-config/icon="uid://rn2bvtbwtibk"
+config/icon="uid://dwb6132h7ssnw"
 
 [display]
 
