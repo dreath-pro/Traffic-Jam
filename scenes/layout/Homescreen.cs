@@ -25,13 +25,11 @@ public partial class Homescreen : Control
 
     private void OnPlayPressed()
     {
-        GD.Print("Play button is pressed");
         GetTree().ChangeSceneToFile("res://scenes/game/game.tscn");
     }
 
     private void OnExitPressed()
     {
-        GD.Print("Exit button is pressed");
         GetTree().Quit();
     }
 

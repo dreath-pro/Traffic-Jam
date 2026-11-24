@@ -8,7 +8,7 @@ public partial class Game : Node2D
     private Player player;
     private Timer timeCount;
     private String timeText;
-    private Button restartButton, menuButton;
+    private Button restartButton, menuButton, menuButton2, pauseButton, resumeButton;
 
     public override void _Process(double delta)
     {
@@ -25,13 +25,34 @@ public partial class Game : Node2D
 
         player.GameOver += OnGameOver;
 
-        restartButton = GetNode<Button>("%RestartButton");
+        restartButton = GetNodeOrNull<Button>("%RestartButton");
         restartButton.Pressed += OnRestartPressed;
 
-        menuButton = GetNode<Button>("%MenuButton");
+        menuButton = GetNodeOrNull<Button>("%MenuButton");
         menuButton.Pressed += OnMenuPressed;
-         
+
+        pauseButton = GetNodeOrNull<Button>("%PauseButton");
+        pauseButton.Pressed += OnPausePressed;
+
+        resumeButton = GetNodeOrNull<Button>("%ResumeButton");
+        resumeButton.Pressed += OnResumeButton;
+
+        menuButton2 = GetNodeOrNull<Button>("%MenuButton2");
+        menuButton2.Pressed += OnMenuPressed;
+
+        if (restartButton == null)
+            GD.PrintErr("Your restart button is null");
+        if (menuButton == null)
+            GD.PrintErr("Your menu button is null");
+        if (pauseButton == null)
+            GD.PrintErr("Your pause button is null");
+        if (resumeButton == null)
+            GD.PrintErr("Your resume button is null");
+        if (menuButton2 == null)
+            GD.PrintErr("Your menu button 2 is null");
+
         GetNode<CanvasLayer>("GameOverHUD").ProcessMode = Node.ProcessModeEnum.WhenPaused;
+        GetNode<CanvasLayer>("PauseHUD").ProcessMode = Node.ProcessModeEnum.WhenPaused;
     }
 
     private void OnGameOver()
@@ -41,6 +62,20 @@ public partial class Game : Node2D
         GetNode<CanvasLayer>("GameOverHUD").Visible = true;
         GetNode<Label>("%SurviveTimeLabel").Text = "Survive Time: " + timeText;
         GetNode<Label>("%CopsEscapedLabel").Text = "Escaped from cops: " + Cops.totalEscaped;
+    }
+
+    private void OnResumeButton()
+    {
+        timeCount.Start();
+        GetTree().Paused = false;
+        GetNode<CanvasLayer>("PauseHUD").Visible = false;
+    }
+
+    private void OnPausePressed()
+    {
+        timeCount.Stop();
+        GetTree().Paused = true;
+        GetNode<CanvasLayer>("PauseHUD").Visible = true;
     }
 
     private void OnRestartPressed()
