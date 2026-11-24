@@ -24,7 +24,7 @@ animations = [{
 "texture": ExtResource("5_tcpgq")
 }],
 "loop": 1,
-"name": &"run_idle",
+"name": &"default",
 "speed": 5.0
 }]
 
@@ -33,11 +33,12 @@ size = Vector2(82.894745, 15.383136)
 
 [node name="Cops" type="CharacterBody2D" unique_id=1004167286]
 scale = Vector2(2.7199988, 2.7199988)
-collision_layer = 256
-collision_mask = 775
+collision_layer = 4
+collision_mask = 526
 script = ExtResource("1_aop4u")
-entityName = "Cops"
 health = 3
+carAnimationNames = Array[String](["default"])
+characterAnimationNames = Array[String](["empty"])
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=306813846]
 position = Vector2(0.9191181, 21.323536)
@@ -47,10 +48,7 @@ texture = ExtResource("6_qyiv0")
 [node name="Car" type="AnimatedSprite2D" parent="." unique_id=900567035]
 scale = Vector2(1.1710527, 1.1710527)
 sprite_frames = SubResource("SpriteFrames_ssr1l")
-animation = &"run_idle"
-autoplay = "run_idle"
-frame = 2
-frame_progress = 0.042606924
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=459778629]
 position = Vector2(0.6578961, 20.92687)

@@ -52,11 +52,11 @@ public partial class BackSpawn : Node2D
         if (VehicleScene == null)
             return;
 
-        Marker2D point = spawnPoints[rng.RandiRange(0, spawnPoints.Length - 1)];
-
         Vehicles vehicle = VehicleScene.Instantiate<Vehicles>();
         //GetTree().CurrentScene.AddChild(vehicle);
         GetNode<Node2D>("/root/Game/Actors").AddChild(vehicle);
+
+        Marker2D point = spawnPoints[rng.RandiRange(0, spawnPoints.Length - 1)];
         vehicle.GlobalPosition = point.GlobalPosition;
     }
 }

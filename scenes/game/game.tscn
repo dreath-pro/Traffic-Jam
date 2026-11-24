@@ -112,7 +112,7 @@ unique_name_in_owner = true
 position = Vector2(194, 317)
 
 [node name="MapBorderY" type="StaticBody2D" parent="." unique_id=1973475841]
-collision_layer = 4
+collision_layer = 512
 collision_mask = 0
 
 [node name="TopBorder" type="CollisionShape2D" parent="MapBorderY" unique_id=2121552473]
@@ -124,7 +124,7 @@ position = Vector2(571, 645)
 shape = SubResource("RectangleShape2D_e7un2")
 
 [node name="MapBorderX" type="StaticBody2D" parent="." unique_id=50303643]
-collision_layer = 8
+collision_layer = 256
 collision_mask = 0
 
 [node name="Left Border" type="CollisionShape2D" parent="MapBorderX" unique_id=243634983]
