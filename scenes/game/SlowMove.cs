@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Diagnostics;
 
-public partial class BackSpawn : Node2D
+public partial class SlowMove : Node2D
 {
     [Export] public PackedScene VehicleScene { get; set; }
     [Export] public PackedScene TruckScene { get; set; }

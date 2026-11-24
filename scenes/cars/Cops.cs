@@ -20,6 +20,17 @@ public partial class Cops : Car
         MoveAndSlide();
 
         base._PhysicsProcess(delta);
+
+        if (GlobalPosition.X > 2000)
+        {
+            if (GlobalPosition.X < 2800)
+            {
+                totalEscaped++;
+                QueueFree();
+            }
+
+            QueueFree();
+        }
     }
 
     public override void _Ready()
@@ -33,16 +44,5 @@ public partial class Cops : Car
         GetNode<Label>("%HealthLabel").Text = "x" + health.ToString();
 
         base._Ready();
-
-        if (GlobalPosition.X > 2000)
-        {
-            if (GlobalPosition.X < 2800)
-            {
-                totalEscaped++;
-                QueueFree();
-            }
-
-            QueueFree();
-        }
     }
 }

@@ -2,9 +2,10 @@ using Godot;
 using System;
 using System.Diagnostics;
 
-public partial class FrontSpawn : Node2D
+public partial class FastMove : Node2D
 {
     [Export] public PackedScene CopScene { get; set; }
+    [Export] public PackedScene AmbulanceScene { get; set; }
 
     private Marker2D[] spawnPoints;
     private RandomNumberGenerator rng = new();
@@ -25,9 +26,14 @@ public partial class FrontSpawn : Node2D
     private void SpawnAll()
     {
         rngSelected = rng.RandiRange(0, 50);
-        if (rngSelected == 0)
+        switch (rngSelected)
         {
-            SpawnCop();
+            case 0:
+                SpawnCop();
+                break;
+            case 1:
+                SpawnAmbulance();
+                break;
         }
     }
 
@@ -41,5 +47,17 @@ public partial class FrontSpawn : Node2D
         Cops cop = CopScene.Instantiate<Cops>();
         GetNode<Node2D>("/root/Game/Actors").AddChild(cop);
         cop.GlobalPosition = point.GlobalPosition;
+    }
+
+    private void SpawnAmbulance()
+    {
+        if (AmbulanceScene == null)
+            return;
+
+        Marker2D point = spawnPoints[rng.RandiRange(0, spawnPoints.Length - 1)];
+
+        Ambulance ambulance = AmbulanceScene.Instantiate<Ambulance>();
+        GetNode<Node2D>("/root/Game/Actors").AddChild(ambulance);
+        ambulance.GlobalPosition = point.GlobalPosition;
     }
 }

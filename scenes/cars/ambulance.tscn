@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://mebyjie2vq4"]
+
+[ext_resource type="Script" uid="uid://dy3utlgrikh63" path="res://scenes/cars/Ambulance.cs" id="1_a1uml"]
+[ext_resource type="Texture2D" uid="uid://cre6ivy658b8" path="res://assets/icons/shadow.png" id="1_ub6tg"]
+[ext_resource type="Texture2D" uid="uid://cych4of7w8ecy" path="res://assets/cars/ambulance/ambulance1.png" id="2_a1uml"]
+[ext_resource type="Texture2D" uid="uid://br2grbwhd8p03" path="res://assets/cars/ambulance/ambulance2.png" id="3_vtuvg"]
+[ext_resource type="Texture2D" uid="uid://cn5wrgjmohfvl" path="res://assets/cars/ambulance/ambulance3.png" id="4_lggbs"]
+[ext_resource type="Texture2D" uid="uid://3upqn8b6xkqp" path="res://assets/cars/ambulance/ambulance4.png" id="5_01dlx"]
+[ext_resource type="Texture2D" uid="uid://gk73shxpta07" path="res://assets/icons/heart_icon.png" id="7_vtuvg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sl3ph"]
+animations = [{
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("2_a1uml")
+}, {
+"duration": 0.3,
+"texture": ExtResource("3_vtuvg")
+}, {
+"duration": 0.3,
+"texture": ExtResource("4_lggbs")
+}, {
+"duration": 0.3,
+"texture": ExtResource("5_01dlx")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
+size = Vector2(359, 71)
+
+[node name="Ambulance" type="CharacterBody2D" unique_id=498216839]
+collision_layer = 8
+collision_mask = 523
+script = ExtResource("1_a1uml")
+health = 20
+carAnimationNames = Array[String](["default"])
+characterAnimationNames = Array[String](["empty"])
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=2073939954]
+texture_filter = 1
+position = Vector2(0, 82.00001)
+scale = Vector2(5.5750003, 5.0749993)
+texture = ExtResource("1_ub6tg")
+
+[node name="Car" type="AnimatedSprite2D" parent="." unique_id=1162209830]
+texture_filter = 1
+scale = Vector2(3.8600001, 3.8600001)
+sprite_frames = SubResource("SpriteFrames_sl3ph")
+frame = 1
+frame_progress = 0.59456253
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=260100241]
+position = Vector2(0.5, 82.5)
+shape = SubResource("RectangleShape2D_sl3ph")
+
+[node name="Decision" type="Timer" parent="." unique_id=629135125]
+wait_time = 3.0
+autostart = true
+
+[node name="Steady" type="Timer" parent="." unique_id=656290053]
+wait_time = 2.0
+autostart = true
+
+[node name="Control" type="Control" parent="." unique_id=2027377246]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -196.0
+offset_top = -267.0
+offset_right = -89.0
+offset_bottom = -227.0
+scale = Vector2(3.680906, 3.452001)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=844183938]
+layout_mode = 0
+offset_left = -3.8034058
+offset_top = 7.531867
+offset_right = 109.7556
+offset_bottom = 39.71032
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer" unique_id=663982530]
+layout_mode = 2
+texture = ExtResource("7_vtuvg")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HealthLabel" type="Label" parent="Control/HBoxContainer" unique_id=258311599]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "x0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShieldTimer" type="Timer" parent="." unique_id=227132865]
+wait_time = 2.0
+
+[node name="BlinkTimer" type="Timer" parent="." unique_id=2003497491]
+wait_time = 0.049
+autostart = true

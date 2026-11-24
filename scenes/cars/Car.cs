@@ -107,8 +107,21 @@ public partial class Car : CharacterBody2D
             health -= 1;
         if (body is Cops)
             health -= 3;
+        if (body is Ambulance)
+            health -= 5;
 
         if (this is Player && body is StaticBody2D)
+            return;
+
+        if (this is Ambulance && body is StaticBody2D)
+        {
+            return;
+        }
+
+        if (this is Player && body is Ambulance)
+            return;
+
+        if (this is Ambulance && body is Player)
             return;
 
         hasShield = true;

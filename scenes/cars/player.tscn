@@ -121,7 +121,6 @@ texture = ExtResource("2_r1jvk")
 
 [node name="Character" type="AnimatedSprite2D" parent="." unique_id=1416956595]
 sprite_frames = SubResource("SpriteFrames_ssr1l")
-autoplay = "default"
 
 [node name="Car" type="AnimatedSprite2D" parent="." unique_id=1747784089]
 sprite_frames = SubResource("SpriteFrames_ss0ko")

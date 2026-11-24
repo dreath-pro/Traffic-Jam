@@ -32,9 +32,10 @@ size = Vector2(430.68146, 35.087723)
 
 [node name="CargoTruck" type="CharacterBody2D" unique_id=1697634268]
 scale = Vector2(1.9200003, 1.9200003)
-collision_layer = 8
-collision_mask = 520
+collision_layer = 4
+collision_mask = 516
 script = ExtResource("1_ldmbb")
+health = 1
 carAnimationNames = Array[String](["default"])
 characterAnimationNames = Array[String](["empty"])
 
@@ -49,7 +50,6 @@ texture_filter = 1
 position = Vector2(-6.2499866, -1.1363655)
 scale = Vector2(2.0499983, 1.4545441)
 sprite_frames = SubResource("SpriteFrames_sl3ph")
-autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=717920438]
 position = Vector2(-1.7045445, 35.964916)

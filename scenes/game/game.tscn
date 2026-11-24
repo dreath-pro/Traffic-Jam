@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dk7ivb4q2kp1m" path="res://scenes/cars/player.tscn" id="2_7h61r"]
 [ext_resource type="PackedScene" uid="uid://bbxmlxx6u6016" path="res://scenes/cars/vehicles.tscn" id="3_0sr1o"]
 [ext_resource type="Texture2D" uid="uid://c10wkbyhpqnq" path="res://assets/map/road.png" id="3_ftsea"]
-[ext_resource type="Script" uid="uid://1cagar4mqxon" path="res://scenes/game/FrontSpawn.cs" id="4_bdhmt"]
-[ext_resource type="Script" uid="uid://cyefydkyrfo5o" path="res://scenes/game/BackSpawn.cs" id="4_kelw5"]
+[ext_resource type="Script" uid="uid://1cagar4mqxon" path="res://scenes/game/FastMove.cs" id="4_bdhmt"]
+[ext_resource type="Script" uid="uid://cyefydkyrfo5o" path="res://scenes/game/SlowMove.cs" id="4_kelw5"]
 [ext_resource type="Texture2D" uid="uid://b348tr4k3jnw2" path="res://assets/map/road_end_down.png" id="4_otnwt"]
 [ext_resource type="Texture2D" uid="uid://n7vyv0n2hobj" path="res://assets/map/road_end_up.png" id="5_3xj4h"]
 [ext_resource type="PackedScene" uid="uid://sb2cxah3k64k" path="res://scenes/cars/cops.tscn" id="5_87uf6"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cox4cof3ma27g" path="res://assets/map/road_lane.png" id="6_5v6r0"]
 [ext_resource type="Texture2D" uid="uid://brbs1in24a6gw" path="res://assets/map/road_small_line.png" id="7_uyinl"]
 [ext_resource type="PackedScene" uid="uid://mjwkvght0c0h" path="res://scenes/cars/cargo_truck.tscn" id="8_2a8rs"]
+[ext_resource type="PackedScene" uid="uid://mebyjie2vq4" path="res://scenes/cars/ambulance.tscn" id="10_otnwt"]
 [ext_resource type="Script" uid="uid://fxb6vulmdmbw" path="res://scenes/game/MobileControls.cs" id="14_ftsea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_10c2w"]
@@ -57,16 +58,16 @@ sources/4 = SubResource("TileSetAtlasSource_8b66f")
 sources/5 = SubResource("TileSetAtlasSource_3jaai")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sl3ph"]
-size = Vector2(1152, 10)
+size = Vector2(2713, 309)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e7un2"]
-size = Vector2(1162, 10)
+size = Vector2(2737, 313)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssr1l"]
-size = Vector2(10, 650)
+size = Vector2(130, 650)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ft2r"]
-size = Vector2(10, 660)
+size = Vector2(124, 660)
 
 [sub_resource type="CSharpScript" id="CSharpScript_lfrn8"]
 script/source = "using Godot;
@@ -113,69 +114,69 @@ position = Vector2(194, 317)
 
 [node name="MapBorderY" type="StaticBody2D" parent="." unique_id=1973475841]
 collision_layer = 512
-collision_mask = 0
+collision_mask = 7
 
 [node name="TopBorder" type="CollisionShape2D" parent="MapBorderY" unique_id=2121552473]
-position = Vector2(576, -5)
+position = Vector2(530.5, -164.5)
 shape = SubResource("RectangleShape2D_sl3ph")
 
 [node name="BotBorder" type="CollisionShape2D" parent="MapBorderY" unique_id=1244580029]
-position = Vector2(571, 645)
+position = Vector2(528.5, 796.5)
 shape = SubResource("RectangleShape2D_e7un2")
 
 [node name="MapBorderX" type="StaticBody2D" parent="." unique_id=50303643]
 collision_layer = 256
-collision_mask = 0
 
 [node name="Left Border" type="CollisionShape2D" parent="MapBorderX" unique_id=243634983]
-position = Vector2(-5, 315)
+position = Vector2(-65, 315)
 shape = SubResource("RectangleShape2D_ssr1l")
 
 [node name="Right Border" type="CollisionShape2D" parent="MapBorderX" unique_id=1145166539]
-position = Vector2(1157, 320)
+position = Vector2(1214, 320)
 shape = SubResource("RectangleShape2D_5ft2r")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=770881285]
 position = Vector2(575, 316)
 scale = Vector2(1.0218184, 0.99697065)
 
-[node name="FrontSpawn" type="Node2D" parent="Camera2D" unique_id=261464997]
+[node name="FastMove" type="Node2D" parent="Camera2D" unique_id=261464997]
 position = Vector2(-562.7223, -316.96017)
 scale = Vector2(0.9786474, 1.0030385)
 script = ExtResource("4_bdhmt")
 CopScene = ExtResource("5_87uf6")
+AmbulanceScene = ExtResource("10_otnwt")
 
-[node name="SpawnTimer" type="Timer" parent="Camera2D/FrontSpawn" unique_id=1292056641]
+[node name="SpawnTimer" type="Timer" parent="Camera2D/FastMove" unique_id=1292056641]
 wait_time = 0.747
 autostart = true
 
-[node name="SpawnPoint1" type="Marker2D" parent="Camera2D/FrontSpawn" unique_id=1308807563]
+[node name="SpawnPoint1" type="Marker2D" parent="Camera2D/FastMove" unique_id=1308807563]
 position = Vector2(-389.00006, 87)
 
-[node name="SpawnPoint2" type="Marker2D" parent="Camera2D/FrontSpawn" unique_id=258453684]
+[node name="SpawnPoint2" type="Marker2D" parent="Camera2D/FastMove" unique_id=258453684]
 position = Vector2(-389.00006, 321)
 
-[node name="SpawnPoint3" type="Marker2D" parent="Camera2D/FrontSpawn" unique_id=2004002207]
+[node name="SpawnPoint3" type="Marker2D" parent="Camera2D/FastMove" unique_id=2004002207]
 position = Vector2(-389.00006, 551)
 
-[node name="BackSpawn" type="Node2D" parent="Camera2D" unique_id=1803770269]
+[node name="SlowMove" type="Node2D" parent="Camera2D" unique_id=1803770269]
 position = Vector2(-562.7223, -316.96017)
 scale = Vector2(0.9786474, 1.0030385)
 script = ExtResource("4_kelw5")
 VehicleScene = ExtResource("3_0sr1o")
 TruckScene = ExtResource("8_2a8rs")
 
-[node name="SpawnTimer" type="Timer" parent="Camera2D/BackSpawn" unique_id=1974810360]
+[node name="SpawnTimer" type="Timer" parent="Camera2D/SlowMove" unique_id=1974810360]
 wait_time = 0.747
 autostart = true
 
-[node name="SpawnPoint1" type="Marker2D" parent="Camera2D/BackSpawn" unique_id=1852238697]
+[node name="SpawnPoint1" type="Marker2D" parent="Camera2D/SlowMove" unique_id=1852238697]
 position = Vector2(1694, 87)
 
-[node name="SpawnPoint2" type="Marker2D" parent="Camera2D/BackSpawn" unique_id=1532745184]
+[node name="SpawnPoint2" type="Marker2D" parent="Camera2D/SlowMove" unique_id=1532745184]
 position = Vector2(1694, 321)
 
-[node name="SpawnPoint3" type="Marker2D" parent="Camera2D/BackSpawn" unique_id=1215501511]
+[node name="SpawnPoint3" type="Marker2D" parent="Camera2D/SlowMove" unique_id=1215501511]
 position = Vector2(1694, 551)
 
 [node name="TimerHUD" type="CanvasLayer" parent="." unique_id=42063304]
