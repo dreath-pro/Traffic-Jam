@@ -6,11 +6,10 @@ A 2D top-down vehicle-dodging arcade game built with **Godot Engine**.
 ---
 
 <p align="center">
-  <img width="49%" height="641" alt="Traffic Jam gameplay" src="https://github.com/user-attachments/assets/a8d1ed15-8c56-4e42-b1c2-d305d7b06c9b" />
-  <img width="49%" height="643" alt="Traffic Jam gameplay" src="https://github.com/user-attachments/assets/edc4fa95-389d-4405-b96d-cd2a1fa8822d" />
-  <img width="49%" height="643" alt="Traffic Jam gameplay" src="https://github.com/user-attachments/assets/e48770ef-f99b-46b8-b029-34b2ddf8f10c" />
-  <img width="49%" height="645" alt="Traffic Jam gameplay" src="https://github.com/user-attachments/assets/1cf0983d-5d2f-4b9f-8b30-85bcbe03b358" />
-  <img width="49%" height="645" alt="Traffic Jam gameplay" src="https://github.com/user-attachments/assets/bfe0a228-6ea5-4c5f-a1c0-23ffb49cc987" />
+  <img width="49%" height="642" alt="Traffic Jam gameplay" src="https://github.com/user-attachments/assets/a98624fb-ce32-4e95-a580-39259a069e91" />
+  <img width="49%" height="643" alt="Traffic Jam gameplay" src="https://github.com/user-attachments/assets/9481b230-c396-44be-abc3-d97a16c644f5" />
+  <img width="49%" height="642" alt="Traffic Jam gameplay" src="https://github.com/user-attachments/assets/6aa5351d-2240-4708-88fc-79a63e4d724d" />
+  <img width="49%" height="642" alt="Traffic Jam gameplay" src="https://github.com/user-attachments/assets/b765d4b3-0983-42e7-9df8-414875351ea6" />
 </p>
 
 ---
@@ -19,7 +18,7 @@ A 2D top-down vehicle-dodging arcade game built with **Godot Engine**.
 * **Top-Down Player Movement:** Smooth movement using Godot's `CharacterBody2D`.
 * **Vehicle AI:** Dodge unpredictable NPC vehicles that change direction and move across the road.
 * **Truck AI:** Trucks continue moving backward and cannot be damaged by the player and other vehicles.
-* **Police Mini-Boss:** A pursuing police vehicle that has 50/50 chance of spawning every 30 seconds and tracks the player's vertical position while continuing forward. Outmaneuver it by moving above or below its path and slipping past it.
+* **Police Mini-Boss:** A pursuing police vehicle that has a 1-in-50 chance of spawning and tracks the player's vertical position while continuing forward. Outmaneuver it by moving above or below its path and slipping past it.
 * **Health System:** Collisions with other vehicles reduce the player's health.
 
 ---
@@ -35,7 +34,7 @@ A 2D top-down vehicle-dodging arcade game built with **Godot Engine**.
 
 ## 🚧 Development Status
 
-**Status:** Early Development · **Platforms:** Windows, Android · **Version:** v0.2.1
+**Status:** Early Development · **Platforms:** Windows, Android · **Version:** v0.3.0
 
 Gameplay mechanics and features are still being developed, so you may encounter bugs, balancing issues, or unfinished content.
 
@@ -70,7 +69,7 @@ For Android
 
 ## 🗺️ Roadmap
 
-- [ ] Health recovery and vehicle repair mechanics
+- [x] Health recovery and vehicle repair mechanics
 - [ ] Currency and scoring system
 - [ ] Leaderboard system
 - [ ] Vehicle customization
