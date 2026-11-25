@@ -25,13 +25,13 @@ public partial class FastMove : Node2D
 
     private void SpawnAll()
     {
-        rngSelected = rng.RandiRange(0, 50);
+        rngSelected = rng.RandiRange(1, 50);
         switch (rngSelected)
         {
-            case 0:
+            case 1:
                 SpawnCop();
                 break;
-            case 1:
+            case 2:
                 SpawnAmbulance();
                 break;
         }
