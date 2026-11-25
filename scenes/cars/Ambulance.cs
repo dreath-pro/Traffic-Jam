@@ -4,6 +4,10 @@ using System;
 public partial class Ambulance : Car
 {
     private RandomNumberGenerator randomNumber = new RandomNumberGenerator();
+    [Export] public PackedScene HeartScene;
+    private Marker2D heartSpawn;
+    private Timer dropTimer;
+    private int dropCount = 2;
 
     public override void _PhysicsProcess(double delta)
     {
@@ -28,6 +32,42 @@ public partial class Ambulance : Car
         Timer steady = GetNode<Timer>("Steady");
         steady.Timeout += Steady;
         Steady();
+
+        heartSpawn = GetNodeOrNull<Marker2D>("HeartSpawn");
+        if (heartSpawn == null)
+        {
+            GD.PrintErr("Your heartspawn marker is null");
+            return;
+        }
+
+        dropTimer = GetNodeOrNull<Timer>("DropTimer");
+        if (dropTimer == null)
+        {
+            GD.PrintErr("Your drop timer is null");
+            return;
+        }else
+        {
+            dropTimer.Timeout += OnDropTimeout;
+        }
+    }
+
+    private void OnDropTimeout()
+    {
+        DropHeart();
+        dropCount--;
+
+        if (dropCount > 0)
+        {
+            dropTimer.Start();
+        }
+    }
+
+    private void DropHeart()
+    {
+        var heart = HeartScene.Instantiate<HeartFloat>();
+        GetTree().CurrentScene.AddChild(heart);
+        //GetNode<Node2D>("/root/Game/Actors").AddChild(heart);
+        heart.GlobalPosition = heartSpawn.GlobalPosition;
     }
 
     private void Steady()

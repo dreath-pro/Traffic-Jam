@@ -3,10 +3,11 @@
 [ext_resource type="Script" uid="uid://dy3utlgrikh63" path="res://scenes/cars/Ambulance.cs" id="1_a1uml"]
 [ext_resource type="Texture2D" uid="uid://cre6ivy658b8" path="res://assets/icons/shadow.png" id="1_ub6tg"]
 [ext_resource type="Texture2D" uid="uid://cych4of7w8ecy" path="res://assets/cars/ambulance/ambulance1.png" id="2_a1uml"]
+[ext_resource type="PackedScene" uid="uid://cpng75t7lruly" path="res://scenes/collectibles/heart_float.tscn" id="2_lggbs"]
 [ext_resource type="Texture2D" uid="uid://br2grbwhd8p03" path="res://assets/cars/ambulance/ambulance2.png" id="3_vtuvg"]
 [ext_resource type="Texture2D" uid="uid://cn5wrgjmohfvl" path="res://assets/cars/ambulance/ambulance3.png" id="4_lggbs"]
 [ext_resource type="Texture2D" uid="uid://3upqn8b6xkqp" path="res://assets/cars/ambulance/ambulance4.png" id="5_01dlx"]
-[ext_resource type="Texture2D" uid="uid://gk73shxpta07" path="res://assets/icons/heart_icon.png" id="7_vtuvg"]
+[ext_resource type="Texture2D" uid="uid://dep603slb4rm7" path="res://assets/icons/green_heart_icon.png" id="7_vtuvg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sl3ph"]
 animations = [{
@@ -35,6 +36,8 @@ size = Vector2(359, 71)
 collision_layer = 8
 collision_mask = 523
 script = ExtResource("1_a1uml")
+HeartScene = ExtResource("2_lggbs")
+maxHealth = 20
 health = 20
 carAnimationNames = Array[String](["default"])
 characterAnimationNames = Array[String](["empty"])
@@ -100,4 +103,11 @@ wait_time = 2.0
 
 [node name="BlinkTimer" type="Timer" parent="." unique_id=2003497491]
 wait_time = 0.049
+autostart = true
+
+[node name="HeartSpawn" type="Marker2D" parent="." unique_id=1508874756]
+position = Vector2(-184, 0)
+
+[node name="DropTimer" type="Timer" parent="." unique_id=1374756740]
+wait_time = 4.0
 autostart = true

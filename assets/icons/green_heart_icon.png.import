@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rn2bvtbwtibk"
-path="res://.godot/imported/traffic_jam_icon.png-5921071fea635e2139980a6be4fcbb46.ctex"
+uid="uid://dep603slb4rm7"
+path="res://.godot/imported/green_heart_icon.png-59c48dc8d19bea38317eda1bed1dcb7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/traffic_jam_icon.png"
-dest_files=["res://.godot/imported/traffic_jam_icon.png-5921071fea635e2139980a6be4fcbb46.ctex"]
+source_file="res://assets/icons/green_heart_icon.png"
+dest_files=["res://.godot/imported/green_heart_icon.png-59c48dc8d19bea38317eda1bed1dcb7e.ctex"]
 
 [params]
 

@@ -36,6 +36,7 @@ scale = Vector2(2.7199988, 2.7199988)
 collision_layer = 2
 collision_mask = 527
 script = ExtResource("1_aop4u")
+maxHealth = 3
 health = 3
 carAnimationNames = Array[String](["default"])
 characterAnimationNames = Array[String](["empty"])

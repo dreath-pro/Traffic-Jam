@@ -3,7 +3,8 @@ using System;
 
 public partial class Car : CharacterBody2D
 {
-    [Export] public int health;
+    [Export] public int maxHealth;
+    public int health;
 
     [Export] private Godot.Collections.Array<string> carAnimationNames, characterAnimationNames;
     private AnimatedSprite2D carSprite, characterSprite;
@@ -32,6 +33,8 @@ public partial class Car : CharacterBody2D
 
     public override void _Ready()
     {
+        health = maxHealth;
+
         carSprite = GetNodeOrNull<AnimatedSprite2D>("Car");
         characterSprite = GetNodeOrNull<AnimatedSprite2D>("Character");
         blinkTimer = GetNodeOrNull<Timer>("BlinkTimer");
@@ -89,6 +92,19 @@ public partial class Car : CharacterBody2D
         int randomIndex = randomNumber.RandiRange(0, animationNames.Length - 1);
         string chosenAnimation = carAnimationNames[randomIndex];
         carSprite.Play(chosenAnimation);
+    }
+
+    public void Heal()
+    {
+        health++;
+
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+
+        if (healthLabel != null)
+            healthLabel.Text = "x" + health.ToString();
     }
 
     public void takeDamage(CollisionObject2D body)
