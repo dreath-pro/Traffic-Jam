@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bkylu37yrvnik" path="res://assets/icons/animated/heart_wings5.png" id="5_r2yal"]
 [ext_resource type="Texture2D" uid="uid://be1mp0lavrm88" path="res://assets/icons/animated/heart_wings6.png" id="6_kff2p"]
 [ext_resource type="Texture2D" uid="uid://doouvyfvkeexl" path="res://assets/icons/animated/heart_wings7.png" id="7_m0e70"]
+[ext_resource type="Texture2D" uid="uid://cre6ivy658b8" path="res://assets/icons/shadow.png" id="9_1ev4l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sl3ph"]
 animations = [{
@@ -54,3 +55,7 @@ frame_progress = 0.49271086
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1910519471]
 shape = SubResource("CircleShape2D_ssr1l")
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=1179604451]
+position = Vector2(0, 50)
+texture = ExtResource("9_1ev4l")
