@@ -110,8 +110,8 @@ size = Vector2(71.153786, 14.230758)
 scale = Vector2(2.6000023, 2.6000023)
 collision_mask = 782
 script = ExtResource("1_j51pt")
+damage = 1
 maxHealth = 6
-health = 6
 carAnimationNames = Array[String](["default"])
 characterAnimationNames = Array[String](["default"])
 

@@ -3,6 +3,7 @@ using System;
 
 public partial class Car : CharacterBody2D
 {
+    [Export] public int damage;
     [Export] public int maxHealth;
     public int health;
 
@@ -27,7 +28,7 @@ public partial class Car : CharacterBody2D
         {
             var collision = GetSlideCollision(i);
             var body = collision.GetCollider() as CollisionObject2D;
-            takeDamage(body);
+            DamageFilter(body);
         }
     }
 
@@ -107,38 +108,9 @@ public partial class Car : CharacterBody2D
             healthLabel.Text = "x" + health.ToString();
     }
 
-    public void takeDamage(CollisionObject2D body)
+    public void TakeDamage(int amount)
     {
-        if (this is CargoTruck)
-            return;
-
-        if (hasShield)
-            return;
-
-        if (body is Vehicles)
-            health -= 1;
-        if (body is CargoTruck)
-            health -= 1;
-        if (body is Player)
-            health -= 1;
-        if (body is Cops)
-            health -= 3;
-        if (body is Ambulance)
-            health -= 5;
-
-        if (this is Player && body is StaticBody2D)
-            return;
-
-        if (this is Ambulance && body is StaticBody2D)
-        {
-            return;
-        }
-
-        if (this is Player && body is Ambulance)
-            return;
-
-        if (this is Ambulance && body is Player)
-            return;
+        health -= amount;
 
         hasShield = true;
 
@@ -161,6 +133,53 @@ public partial class Car : CharacterBody2D
 
         if (healthLabel != null)
             healthLabel.Text = "x" + health.ToString();
+    }
+
+    private void DamageFilter(CollisionObject2D body)
+    {
+        if (this is CargoTruck)
+            return;
+
+        if (this is Player && body is StaticBody2D)
+            return;
+
+        if (this is Ambulance && body is StaticBody2D)
+            return;
+
+        if (this is Player && body is Ambulance)
+            return;
+
+        if (this is Ambulance && body is Player)
+            return;
+
+        if (hasShield)
+            return;
+
+        if (body is Vehicles vehicle)
+        {
+            TakeDamage(vehicle.damage);
+            body.Call("TakeDamage", this.damage);
+        }
+        if (body is CargoTruck truck)
+        {
+            TakeDamage(truck.damage);
+            body.Call("TakeDamage", this.damage);
+        }
+        if (body is Player player)
+        {
+            TakeDamage(player.damage);
+            body.Call("TakeDamage", this.damage);
+        }
+        if (body is Cops cop)
+        {
+            TakeDamage(cop.damage);
+            body.Call("TakeDamage", this.damage);
+        }
+        if (body is Ambulance ambulance)
+        {
+            TakeDamage(ambulance.damage);
+            body.Call("TakeDamage", this.damage);
+        }
     }
 
     private void onBlinkTimerTimeout()

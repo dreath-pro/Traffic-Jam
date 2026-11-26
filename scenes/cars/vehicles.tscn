@@ -714,6 +714,7 @@ scale = Vector2(2.4799976, 2.4799976)
 collision_layer = 2
 collision_mask = 527
 script = ExtResource("1_oaoh4")
+damage = 1
 maxHealth = 1
 carAnimationNames = Array[String](["blue", "green", "orange", "red", "violet", "yellow", "black", "white", "brown", "pink", "gray", "dark_violet", "dark_blue", "dark_brown", "dark_green", "dark_orange", "dark_pink", "dark_red", "dark_yellow", "light_blue", "light_brown", "light_green", "light_orange", "light_pink", "light_red", "light_yellow", "light_violet", "red_orange", "yellow_orange", "blue_violet", "red_violet", "blue_green", "yellow_green"])
 characterAnimationNames = Array[String](["golden_lab", "human", "pig", "chick", "summer_boy", "chicken", "cow", "luxury_girl"])
