@@ -34,7 +34,7 @@ size = Vector2(359, 71)
 
 [node name="Ambulance" type="CharacterBody2D" unique_id=498216839]
 collision_layer = 8
-collision_mask = 523
+collision_mask = 520
 script = ExtResource("1_a1uml")
 HeartScene = ExtResource("2_lggbs")
 damage = 5
@@ -109,5 +109,5 @@ autostart = true
 position = Vector2(-184, 0)
 
 [node name="DropTimer" type="Timer" parent="." unique_id=1374756740]
-wait_time = 4.0
+wait_time = 4.800000000000001
 autostart = true

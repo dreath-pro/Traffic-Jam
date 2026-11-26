@@ -50,6 +50,9 @@ public partial class Car : CharacterBody2D
 
         randomCarAnimation();
         randomCharacterAnimation();
+
+        if (healthLabel != null)
+            healthLabel.Text = "x" + health.ToString();
     }
 
     private void randomCharacterAnimation()
@@ -110,6 +113,9 @@ public partial class Car : CharacterBody2D
 
     public void TakeDamage(int amount)
     {
+        if (hasShield)
+            return;
+
         health -= amount;
 
         hasShield = true;
@@ -137,6 +143,9 @@ public partial class Car : CharacterBody2D
 
     private void DamageFilter(CollisionObject2D body)
     {
+        if (hasShield)
+            return;
+
         if (this is CargoTruck)
             return;
 
@@ -156,9 +165,6 @@ public partial class Car : CharacterBody2D
             return;
 
         if (this is Cops && body is Cops)
-            return;
-
-        if (hasShield)
             return;
 
         if (body is Vehicles vehicle)

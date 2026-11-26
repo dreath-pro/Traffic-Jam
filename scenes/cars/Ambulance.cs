@@ -53,13 +53,12 @@ public partial class Ambulance : Car
 
     private void OnDropTimeout()
     {
+        if (dropCount <= 0)
+            return;
+
         DropHeart();
         dropCount--;
-
-        if (dropCount > 0)
-        {
-            dropTimer.Start();
-        }
+        dropTimer.Start();
     }
 
     private void DropHeart()

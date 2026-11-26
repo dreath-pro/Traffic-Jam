@@ -34,7 +34,7 @@ size = Vector2(82.894745, 15.383136)
 [node name="Cops" type="CharacterBody2D" unique_id=1004167286]
 scale = Vector2(2.7199988, 2.7199988)
 collision_layer = 2
-collision_mask = 527
+collision_mask = 526
 script = ExtResource("1_aop4u")
 damage = 3
 maxHealth = 3
