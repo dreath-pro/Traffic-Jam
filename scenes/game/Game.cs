@@ -8,7 +8,7 @@ public partial class Game : Node2D
     private Player player;
     private Timer timeCount;
     private String timeText;
-    private Button restartButton, menuButton, menuButton2, pauseButton, resumeButton;
+    private Button restartButton, restartButton2, menuButton, menuButton2, pauseButton, resumeButton;
 
     public override void _Process(double delta)
     {
@@ -24,6 +24,9 @@ public partial class Game : Node2D
         GetNode<Label>("%HealthLabel").Text = "x" + player.health;
 
         player.GameOver += OnGameOver;
+
+        restartButton2 = GetNodeOrNull<Button>("%RestartButton2");
+        restartButton2.Pressed += OnRestartPressed;
 
         restartButton = GetNodeOrNull<Button>("%RestartButton");
         restartButton.Pressed += OnRestartPressed;
