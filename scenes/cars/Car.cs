@@ -143,13 +143,19 @@ public partial class Car : CharacterBody2D
         if (this is Player && body is StaticBody2D)
             return;
 
-        if (this is Ambulance && body is StaticBody2D)
-            return;
-
         if (this is Player && body is Ambulance)
             return;
 
+        if (this is Ambulance && body is StaticBody2D)
+            return;
+
+        if (this is Ambulance && body is Ambulance)
+            return;
+
         if (this is Ambulance && body is Player)
+            return;
+
+        if (this is Cops && body is Cops)
             return;
 
         if (hasShield)
