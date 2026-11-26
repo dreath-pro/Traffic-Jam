@@ -39,13 +39,13 @@
 [ext_resource type="Texture2D" uid="uid://blsp35o5iecbp" path="res://assets/cars/npc/character/summer_boy2.png" id="16_aqc1y"]
 [ext_resource type="Texture2D" uid="uid://cbavlbx0vb3tq" path="res://assets/cars/npc/character/summer_boy3.png" id="17_1hohf"]
 [ext_resource type="Texture2D" uid="uid://b1m8ncgvdbi6x" path="res://assets/cars/npc/car/violet_car1.png" id="17_dphtc"]
-[ext_resource type="Texture2D" uid="uid://cio7gim5j51j8" path="res://assets/cars/npc/car/brown1.png" id="18_fhlvo"]
+[ext_resource type="Texture2D" uid="uid://cio7gim5j51j8" path="res://assets/cars/npc/car/brown_car1.png" id="18_fhlvo"]
 [ext_resource type="Texture2D" uid="uid://bgwsyny0qqp7w" path="res://assets/cars/npc/car/violet_car2.png" id="18_m7g84"]
 [ext_resource type="Texture2D" uid="uid://dg7shxte2dxnx" path="res://assets/cars/npc/character/luxury_girl1.png" id="18_wrn5m"]
-[ext_resource type="Texture2D" uid="uid://6any2r4e2h3a" path="res://assets/cars/npc/car/brown2.png" id="19_0xvt0"]
+[ext_resource type="Texture2D" uid="uid://6any2r4e2h3a" path="res://assets/cars/npc/car/brown_car2.png" id="19_0xvt0"]
 [ext_resource type="Texture2D" uid="uid://b7dym7n1agq5a" path="res://assets/cars/npc/car/violet_car3.png" id="19_bkoc6"]
 [ext_resource type="Texture2D" uid="uid://bko2kwx7tecul" path="res://assets/cars/npc/character/luxury_girl2.png" id="19_rble4"]
-[ext_resource type="Texture2D" uid="uid://0u2ebx4oe40l" path="res://assets/cars/npc/car/brown3.png" id="20_fk416"]
+[ext_resource type="Texture2D" uid="uid://0u2ebx4oe40l" path="res://assets/cars/npc/car/brown_car3.png" id="20_fk416"]
 [ext_resource type="Texture2D" uid="uid://wrckccpic4jp" path="res://assets/cars/npc/character/luxury_girl3.png" id="20_hjwbl"]
 [ext_resource type="Texture2D" uid="uid://ducar4s0773g7" path="res://assets/cars/npc/car/yellow_car1.png" id="20_ryiav"]
 [ext_resource type="Texture2D" uid="uid://dbabh0f5ci8qb" path="res://assets/cars/npc/car/yellow_car2.png" id="21_42w2s"]
@@ -57,8 +57,56 @@
 [ext_resource type="Texture2D" uid="uid://plu7mkxle3k3" path="res://assets/cars/npc/car/white_car2.png" id="31_bxdhn"]
 [ext_resource type="Texture2D" uid="uid://cmlx6kfx8c4re" path="res://assets/cars/npc/car/white_car3.png" id="32_mc0wu"]
 [ext_resource type="Texture2D" uid="uid://c48k4uldr3crj" path="res://assets/cars/npc/car/gray_car1.png" id="36_5niw4"]
+[ext_resource type="Texture2D" uid="uid://cgmb60x0xwh6b" path="res://assets/cars/npc/car/dark_violet_car1.png" id="36_morgn"]
+[ext_resource type="Texture2D" uid="uid://c8kxg5mfso0kf" path="res://assets/cars/npc/car/dark_blue_car1.png" id="36_nt31c"]
+[ext_resource type="Texture2D" uid="uid://ct0ltnmvajgix" path="res://assets/cars/npc/car/dark_blue_car2.png" id="37_4t52q"]
 [ext_resource type="Texture2D" uid="uid://dnoky6i1p6vfw" path="res://assets/cars/npc/car/gray_car2.png" id="37_6pl6s"]
+[ext_resource type="Texture2D" uid="uid://do5ma6mcfkfkq" path="res://assets/cars/npc/car/dark_violet_car2.png" id="37_ma6m8"]
+[ext_resource type="Texture2D" uid="uid://cd13cue3ai3ko" path="res://assets/cars/npc/car/dark_violet_car3.png" id="38_ay2jo"]
+[ext_resource type="Texture2D" uid="uid://c8w5mdqbgycik" path="res://assets/cars/npc/car/dark_blue_car3.png" id="38_jtc6i"]
 [ext_resource type="Texture2D" uid="uid://bxyn5gnf6bwm3" path="res://assets/cars/npc/car/gray_car3.png" id="38_wfh1a"]
+[ext_resource type="Texture2D" uid="uid://bawshew1vhalg" path="res://assets/cars/npc/car/dark_brown_car1.png" id="39_swaax"]
+[ext_resource type="Texture2D" uid="uid://cwwkgiar4jtn1" path="res://assets/cars/npc/car/dark_brown_car2.png" id="40_12nds"]
+[ext_resource type="Texture2D" uid="uid://dxr43qtn7tcrb" path="res://assets/cars/npc/car/dark_brown_car3.png" id="41_4hchs"]
+[ext_resource type="Texture2D" uid="uid://cjbfi8l8gykbn" path="res://assets/cars/npc/car/dark_green_car1.png" id="42_swaax"]
+[ext_resource type="Texture2D" uid="uid://dnsctgdsi18j1" path="res://assets/cars/npc/car/dark_green_car2.png" id="43_12nds"]
+[ext_resource type="Texture2D" uid="uid://cxdl15j4uerwr" path="res://assets/cars/npc/car/dark_green_car3.png" id="44_4hchs"]
+[ext_resource type="Texture2D" uid="uid://b7hvw5nxax6n6" path="res://assets/cars/npc/car/dark_orange_car1.png" id="45_rd373"]
+[ext_resource type="Texture2D" uid="uid://ciygnc7d8kpf6" path="res://assets/cars/npc/car/dark_orange_car2.png" id="46_ymqx5"]
+[ext_resource type="Texture2D" uid="uid://0sey7espyl1o" path="res://assets/cars/npc/car/dark_orange_car3.png" id="47_452db"]
+[ext_resource type="Texture2D" uid="uid://bq8gma6h30581" path="res://assets/cars/npc/car/dark_pink_car1.png" id="48_t7oft"]
+[ext_resource type="Texture2D" uid="uid://hdaswhq5owca" path="res://assets/cars/npc/car/dark_pink_car2.png" id="49_24xy5"]
+[ext_resource type="Texture2D" uid="uid://vy0v1ksb4d3s" path="res://assets/cars/npc/car/dark_pink_car3.png" id="50_wvdoi"]
+[ext_resource type="Texture2D" uid="uid://8afx7re4wbp5" path="res://assets/cars/npc/car/dark_red_car1.png" id="51_5n24c"]
+[ext_resource type="Texture2D" uid="uid://l3p3jsajsmam" path="res://assets/cars/npc/car/dark_red_car2.png" id="52_snllr"]
+[ext_resource type="Texture2D" uid="uid://cs0pu5jigo0nd" path="res://assets/cars/npc/car/dark_red_car3.png" id="53_e3k3n"]
+[ext_resource type="Texture2D" uid="uid://cjfti1yd3ygja" path="res://assets/cars/npc/car/dark_yellow_car1.png" id="57_xbg3r"]
+[ext_resource type="Texture2D" uid="uid://yjawpjm5aeeu" path="res://assets/cars/npc/car/dark_yellow_car2.png" id="58_f2qwq"]
+[ext_resource type="Texture2D" uid="uid://de3iaw35l1mrc" path="res://assets/cars/npc/car/dark_yellow_car3.png" id="59_ajbav"]
+[ext_resource type="Texture2D" uid="uid://dhu6wpwipxfth" path="res://assets/cars/npc/car/light_blue_car1.png" id="66_hfr84"]
+[ext_resource type="Texture2D" uid="uid://bn2xhshekqqtc" path="res://assets/cars/npc/car/light_blue_car2.png" id="67_4jpuv"]
+[ext_resource type="Texture2D" uid="uid://bubasxktv6ee0" path="res://assets/cars/npc/car/light_blue_car3.png" id="68_xakqw"]
+[ext_resource type="Texture2D" uid="uid://q7r7104nb5nm" path="res://assets/cars/npc/car/light_brown_car1.png" id="69_mmo8k"]
+[ext_resource type="Texture2D" uid="uid://bhirpbkh81b3q" path="res://assets/cars/npc/car/light_brown_car2.png" id="70_18jag"]
+[ext_resource type="Texture2D" uid="uid://4do5dqfo516l" path="res://assets/cars/npc/car/light_brown_car3.png" id="71_6gfp3"]
+[ext_resource type="Texture2D" uid="uid://cayu2y0vhbuh0" path="res://assets/cars/npc/car/light_green_car1.png" id="72_odqs4"]
+[ext_resource type="Texture2D" uid="uid://cpbqtt6vvtjne" path="res://assets/cars/npc/car/light_green_car2.png" id="73_6s7ox"]
+[ext_resource type="Texture2D" uid="uid://bbpawf0n8csry" path="res://assets/cars/npc/car/light_green_car3.png" id="74_xonan"]
+[ext_resource type="Texture2D" uid="uid://d1wjn8j6wkkl" path="res://assets/cars/npc/car/light_orange_car1.png" id="75_gotb8"]
+[ext_resource type="Texture2D" uid="uid://bm0f417cpnrwa" path="res://assets/cars/npc/car/light_orange_car2.png" id="76_2ytxm"]
+[ext_resource type="Texture2D" uid="uid://cn764ary1ya5a" path="res://assets/cars/npc/car/light_orange_car3.png" id="77_8pgdn"]
+[ext_resource type="Texture2D" uid="uid://oskog2tn44e0" path="res://assets/cars/npc/car/light_pink_car1.png" id="78_pokit"]
+[ext_resource type="Texture2D" uid="uid://ckum3gufesx7r" path="res://assets/cars/npc/car/light_pink_car2.png" id="79_vg6f8"]
+[ext_resource type="Texture2D" uid="uid://do2ucom8ly0pm" path="res://assets/cars/npc/car/light_pink_car3.png" id="80_m48ce"]
+[ext_resource type="Texture2D" uid="uid://cc14gtdnomv4h" path="res://assets/cars/npc/car/light_red_car1.png" id="81_bwq5s"]
+[ext_resource type="Texture2D" uid="uid://bswjwe74wpim" path="res://assets/cars/npc/car/light_red_car2.png" id="82_m26ue"]
+[ext_resource type="Texture2D" uid="uid://dq2r7tlcyticl" path="res://assets/cars/npc/car/light_red_car3.png" id="83_ur8o5"]
+[ext_resource type="Texture2D" uid="uid://bfq5tcr7bgwne" path="res://assets/cars/npc/car/light_yellow_car1.png" id="84_005u2"]
+[ext_resource type="Texture2D" uid="uid://cpapp7pltshqo" path="res://assets/cars/npc/car/light_violet_car1.png" id="84_e81pw"]
+[ext_resource type="Texture2D" uid="uid://kuyrxf6gp2gb" path="res://assets/cars/npc/car/light_violet_car2.png" id="85_8576r"]
+[ext_resource type="Texture2D" uid="uid://cq5webm8ksyp0" path="res://assets/cars/npc/car/light_yellow_car2.png" id="85_xu62n"]
+[ext_resource type="Texture2D" uid="uid://rf2qd6un2neo" path="res://assets/cars/npc/car/light_yellow_car3.png" id="86_ijxvp"]
+[ext_resource type="Texture2D" uid="uid://cieh1rbrqinmo" path="res://assets/cars/npc/car/light_violet_car3.png" id="86_mfm5g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w7gkp"]
 animations = [{
@@ -221,6 +269,118 @@ animations = [{
 }, {
 "frames": [{
 "duration": 0.3,
+"texture": ExtResource("36_nt31c")
+}, {
+"duration": 0.3,
+"texture": ExtResource("37_4t52q")
+}, {
+"duration": 0.3,
+"texture": ExtResource("38_jtc6i")
+}],
+"loop": 1,
+"name": &"dark_blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("39_swaax")
+}, {
+"duration": 0.3,
+"texture": ExtResource("40_12nds")
+}, {
+"duration": 0.3,
+"texture": ExtResource("41_4hchs")
+}],
+"loop": 1,
+"name": &"dark_brown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("42_swaax")
+}, {
+"duration": 0.3,
+"texture": ExtResource("43_12nds")
+}, {
+"duration": 0.3,
+"texture": ExtResource("44_4hchs")
+}],
+"loop": 1,
+"name": &"dark_green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("45_rd373")
+}, {
+"duration": 0.3,
+"texture": ExtResource("46_ymqx5")
+}, {
+"duration": 0.3,
+"texture": ExtResource("47_452db")
+}],
+"loop": 1,
+"name": &"dark_orange",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("48_t7oft")
+}, {
+"duration": 0.3,
+"texture": ExtResource("49_24xy5")
+}, {
+"duration": 0.3,
+"texture": ExtResource("50_wvdoi")
+}],
+"loop": 1,
+"name": &"dark_pink",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("51_5n24c")
+}, {
+"duration": 0.3,
+"texture": ExtResource("52_snllr")
+}, {
+"duration": 0.3,
+"texture": ExtResource("53_e3k3n")
+}],
+"loop": 1,
+"name": &"dark_red",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("36_morgn")
+}, {
+"duration": 0.3,
+"texture": ExtResource("37_ma6m8")
+}, {
+"duration": 0.3,
+"texture": ExtResource("38_ay2jo")
+}],
+"loop": 1,
+"name": &"dark_violet",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("57_xbg3r")
+}, {
+"duration": 0.3,
+"texture": ExtResource("58_f2qwq")
+}, {
+"duration": 0.3,
+"texture": ExtResource("59_ajbav")
+}],
+"loop": 1,
+"name": &"dark_yellow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
 "texture": ExtResource("36_5niw4")
 }, {
 "duration": 0.3,
@@ -245,6 +405,118 @@ animations = [{
 }],
 "loop": 1,
 "name": &"green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("66_hfr84")
+}, {
+"duration": 0.3,
+"texture": ExtResource("67_4jpuv")
+}, {
+"duration": 0.3,
+"texture": ExtResource("68_xakqw")
+}],
+"loop": 1,
+"name": &"light_blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("69_mmo8k")
+}, {
+"duration": 0.3,
+"texture": ExtResource("70_18jag")
+}, {
+"duration": 0.3,
+"texture": ExtResource("71_6gfp3")
+}],
+"loop": 1,
+"name": &"light_brown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("72_odqs4")
+}, {
+"duration": 0.3,
+"texture": ExtResource("73_6s7ox")
+}, {
+"duration": 0.3,
+"texture": ExtResource("74_xonan")
+}],
+"loop": 1,
+"name": &"light_green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("75_gotb8")
+}, {
+"duration": 0.3,
+"texture": ExtResource("76_2ytxm")
+}, {
+"duration": 0.3,
+"texture": ExtResource("77_8pgdn")
+}],
+"loop": 1,
+"name": &"light_orange",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("78_pokit")
+}, {
+"duration": 0.3,
+"texture": ExtResource("79_vg6f8")
+}, {
+"duration": 0.3,
+"texture": ExtResource("80_m48ce")
+}],
+"loop": 1,
+"name": &"light_pink",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("81_bwq5s")
+}, {
+"duration": 0.3,
+"texture": ExtResource("82_m26ue")
+}, {
+"duration": 0.3,
+"texture": ExtResource("83_ur8o5")
+}],
+"loop": 1,
+"name": &"light_red",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("84_e81pw")
+}, {
+"duration": 0.3,
+"texture": ExtResource("85_8576r")
+}, {
+"duration": 0.3,
+"texture": ExtResource("86_mfm5g")
+}],
+"loop": 1,
+"name": &"light_violet",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("84_005u2")
+}, {
+"duration": 0.3,
+"texture": ExtResource("85_xu62n")
+}, {
+"duration": 0.3,
+"texture": ExtResource("86_ijxvp")
+}],
+"loop": 1,
+"name": &"light_yellow",
 "speed": 5.0
 }, {
 "frames": [{
@@ -341,8 +613,7 @@ collision_layer = 2
 collision_mask = 527
 script = ExtResource("1_oaoh4")
 maxHealth = 1
-health = 1
-carAnimationNames = Array[String](["blue", "green", "orange", "red", "violet", "yellow", "black", "white", "brown", "pink", "gray"])
+carAnimationNames = Array[String](["blue", "green", "orange", "red", "violet", "yellow", "black", "white", "brown", "pink", "gray", "dark_violet", "dark_blue", "dark_brown", "dark_green", "dark_orange", "dark_pink", "dark_red", "dark_yellow", "light_blue", "light_brown", "light_green", "light_orange", "light_pink", "light_red", "light_yellow", "light_violet"])
 characterAnimationNames = Array[String](["golden_lab", "human", "pig", "chick", "summer_boy", "chicken", "cow", "luxury_girl"])
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=1759100503]
@@ -357,9 +628,7 @@ frame_progress = 0.510004
 
 [node name="Car" type="AnimatedSprite2D" parent="." unique_id=1342503619]
 sprite_frames = SubResource("SpriteFrames_suqk4")
-animation = &"gray"
-frame = 2
-frame_progress = 0.73427755
+animation = &"light_violet"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2030877195]
 position = Vector2(0.46296516, 21.774214)
