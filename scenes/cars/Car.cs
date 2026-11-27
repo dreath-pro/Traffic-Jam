@@ -175,7 +175,6 @@ public partial class Car : CharacterBody2D
         if (body is CargoTruck truck)
         {
             TakeDamage(truck.damage);
-            body.Call("TakeDamage", this.damage);
         }
         if (body is Player player)
         {
